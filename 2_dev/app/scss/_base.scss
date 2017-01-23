@@ -23,11 +23,12 @@ body {
 }
 
 a {
-  color: inherit;
+  color: $color-ui;
   text-decoration: none;
 
   &:hover {
-    color: $color-ui;
+    color: $color-bkg;
+    background-color: $color-ui;
   }
 }
 
@@ -44,7 +45,7 @@ button:focus {
   text-align: center;
   width: 88px;
   height: 32px;
-  border: 1px solid red;
+  border: 1px solid $color-ui;
   border-radius: 16px;
 }
 
@@ -79,9 +80,17 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left bottom;
+
+  .logotype {
+    @include type-title-h3;
+    color: $color-title;
+  }
 }
 
-
+nav {
+  position: absolute;
+  bottom: 16px;
+}
 // F O O T E R
 // ---------------------------
 // ---------------------------
@@ -92,9 +101,24 @@ p {
 
 .section {
   padding: 32px 16px 64px;
+
+  &.section--project {
+    background-color: $color-bkg-alt1;
+  }
+
+  &.section--statement {
+    background-color: $color-bkg-alt2;
+  }
+
+  &.section--contact {
+    background-color: $color-bkg-alt3;
+    p {
+      font-family: $font-primary;
+    }
+  }
 }
 
 .section__content {
-  padding-top: 16px;
+  padding-top: 18px;
   border-top: 1px solid black;
 }

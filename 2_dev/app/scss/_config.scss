@@ -1,18 +1,15 @@
 // C O L O R
 // ---------------------------
 // ---------------------------
-$color-boaa:      #FF5555;
+$color-title:      #303030;
+$color-txt:        #303030;
 
-$color-txt:       #5C5C5C;
-$color-txt-alt:   #B3B3B3;
-$color-txt-alt2:  #FFFFFF;
+$color-ui:         #FF5C5C;
 
-$color-bkg:        #F8F8F8;
-$color-bkg-alt:    #D5D5D5;
-
-$color-ui:         $color-boaa;
-$color-ui-alt:     $color-txt-alt;
-$color-ui-alt2:    $color-txt-alt2;
+$color-bkg:        #FFFFFF;
+$color-bkg-alt1:   #D8DFE2;
+$color-bkg-alt2:   #FFFF80;
+$color-bkg-alt3:   #FF5C5C;
 
 // M E D I A  Q U E R I E S
 // ---------------------------
@@ -46,7 +43,7 @@ $desktop-width:  1280px;
 @include font-face('suisse', 'SuisseIntl-Book-WebS');
 @include font-face('suisse-mono', 'SuisseIntlMono-Regular-WebS');
 
-$font-primary: 'suisse', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-primary: 'suisse-mono', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 @mixin type-title-h1 {
   font-family: 'gt-sectra';
@@ -57,19 +54,18 @@ $font-primary: 'suisse', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 @mixin type-title-h3 {
-  font-size: 1.75em; // 28px
-  font-weight: bold;
-  line-height: 1.4285714286; // 40px
+  font-size: 1.125em; // 18px
+  line-height: 1.7777777778; // 32px
 }
 
 @mixin type-title-h6 {
-  font-family: 'suisse-mono';
   font-size: 0.875em; // 14px
   line-height: 1.7142857143; // 24px
 }
 
 @mixin type-text-body {
-  font-size: 1.1875em; // 19px
+  font-family: 'suisse', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.125em; // 19px
   line-height: 1.4736842105; // 28px
 }
 
