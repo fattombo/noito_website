@@ -1,0 +1,100 @@
+// G L O B A L
+// ---------------------------
+// ---------------------------
+
+* {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+html {
+  // font-size: 100%; // set in reset file
+  font-family: $font-primary;
+  line-height: 1.5;
+  color: $color-txt;
+  // prevent font scaling on horizontal
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  background-color: $color-bkg;
+  transition: background-color 2s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-ui;
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  width: 88px;
+  height: 32px;
+  border: 1px solid red;
+  border-radius: 16px;
+}
+
+h1 {
+  @include type-title-h1;
+  margin-bottom: 40px;
+}
+
+h3 {
+  @include type-title-h3;
+
+}
+
+h6 {
+  @include type-title-h6;
+  margin-bottom: 16px;
+}
+
+p {
+  @include type-text-body;
+  margin-bottom: 16px;
+}
+
+// H E A D E R
+// ---------------------------
+// ---------------------------
+.header {
+  width: 100%;
+  height: 100vh;
+  padding: 10px 16px 0;
+  background-image: url(../images/noito_play.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+}
+
+
+// F O O T E R
+// ---------------------------
+// ---------------------------
+
+// S E C T I O N
+// ---------------------------
+// ---------------------------
+
+.section {
+  padding: 32px 16px 64px;
+}
+
+.section__content {
+  padding-top: 16px;
+  border-top: 1px solid black;
+}

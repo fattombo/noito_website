@@ -1,0 +1,35 @@
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+     -moz-box-shadow: $x $y $blur $color;
+          box-shadow: $x $y $blur $color;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin font-face($family, $font, $weight: normal, $style: normal) {
+  @font-face {
+      font-family: $family;
+      src: url('../fonts/#{$font}.eot');
+      src: url('../fonts/#{$font}.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/#{$font}.woff') format('woff'),
+           url('../fonts/#{$font}.ttf') format('truetype'),
+           url('../fonts/#{$font}.svg##{$font}') format('svg');
+      font-weight: $weight;
+      font-style: $style;
+  }
+}

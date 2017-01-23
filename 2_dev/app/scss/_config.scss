@@ -1,0 +1,115 @@
+// C O L O R
+// ---------------------------
+// ---------------------------
+$color-boaa:      #FF5555;
+
+$color-txt:       #5C5C5C;
+$color-txt-alt:   #B3B3B3;
+$color-txt-alt2:  #FFFFFF;
+
+$color-bkg:        #F8F8F8;
+$color-bkg-alt:    #D5D5D5;
+
+$color-ui:         $color-boaa;
+$color-ui-alt:     $color-txt-alt;
+$color-ui-alt2:    $color-txt-alt2;
+
+// M E D I A  Q U E R I E S
+// ---------------------------
+// ---------------------------
+$tablet-width:   768px;
+$desktopXS-width: 1024px;
+$desktop-width:  1280px;
+
+@mixin medium {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $desktopXS-width) {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+// T Y P E
+// ---------------------------
+// ---------------------------
+@include font-face('gt-sectra', 'gt-sectra-display-bold', $weight: 'bold');
+@include font-face('suisse', 'SuisseIntl-Book-WebS');
+@include font-face('suisse-mono', 'SuisseIntlMono-Regular-WebS');
+
+$font-primary: 'suisse', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+@mixin type-title-h1 {
+  font-family: 'gt-sectra';
+  font-size: 2.125em; // 34px
+  font-weight: bold;
+  // letter-spacing: -0.5px;
+  line-height: 1.1764705882; // 40px
+}
+
+@mixin type-title-h3 {
+  font-size: 1.75em; // 28px
+  font-weight: bold;
+  line-height: 1.4285714286; // 40px
+}
+
+@mixin type-title-h6 {
+  font-family: 'suisse-mono';
+  font-size: 0.875em; // 14px
+  line-height: 1.7142857143; // 24px
+}
+
+@mixin type-text-body {
+  font-size: 1.1875em; // 19px
+  line-height: 1.4736842105; // 28px
+}
+
+@mixin type-text-small {
+  font-size: 0.6875em; // 11px
+  letter-spacing: 0.5px;
+  line-height: 1.4545454545; // 16px
+}
+
+@mixin type-link {
+  font-size: 0.875em; // 14px
+  letter-spacing: 1.5px;
+  line-height: 1.7142857143; // 24px
+}
+
+// G R I D
+// ---------------------------
+// ---------------------------
+.wrapper {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+  @include clearfix;
+
+  @include medium {
+    max-width: 700px;
+  }
+
+  @include large {
+    padding: 0;
+    max-width: 900px;
+  }
+
+  @include xlarge {
+    padding: 0;
+    max-width: 1200px;
+  }
+}
+
+// A N I M A T I O N S
+// ---------------------------
+// ---------------------------
