@@ -55,7 +55,7 @@ h2 {
 
 h3 {
   @include type-title-h3;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 p {
@@ -105,12 +105,12 @@ footer {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 16px;
+  padding: 0 16px 16px;
   background-color: $color-bkg-alt3;
 
   p {
     @include type-text-small;
-    margin-top: 4px;
+    margin-top: 5px;
     margin-bottom: 0;
   }
 }
@@ -134,14 +134,48 @@ section {
 }
 
 #contact {
+  color: $color-txt;
   background-color: $color-bkg-alt3;
 
   p {
     font-family: 'suisse-mono';
+    margin-bottom: 4px;
+
+    a {
+      &:hover {
+        border-bottom: 1px solid $color-txt;
+      }
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .profile-img {
+    opacity: .9;
+    margin-bottom: 52px;
+  }
+
+  .social-links {
+    text-align: center;
+    margin-top: 32px;
+    border-top: 1px solid $color-txt;
+    padding-top: 32px;
+
+    a {
+      display: inline-block;
+      margin-right: 8px;
+      margin-left: 8px;
+
+      img {
+        display: block;
+      }
+    }
   }
 }
 
 .section__content {
-  padding-top: 18px;
+  padding-top: 16px;
   border-top: 1px solid black;
 }
