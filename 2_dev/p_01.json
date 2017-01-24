@@ -1,0 +1,13 @@
+{
+  "title": "Project title",
+  "short-desc": "About the project",
+  "long-desc": "About the project",
+  "finished": false,
+  "categories": ["typography"],
+  "images": [
+    {
+      "title": "img title",
+      "alt": "alternative text"
+    }
+  ]
+}

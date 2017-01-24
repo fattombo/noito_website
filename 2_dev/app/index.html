@@ -21,134 +21,146 @@ including exhibition, packaging, visual identity, editorial, printed and digital
   <link rel="stylesheet" href="css/master.css">
   <!-- scripts -->
   <!--build:js js/app.min.js -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="js/smooth-scroll.js"></script>
-  <script src="js/app.js"></script>
+  <script defer src="js/app.js"></script>
   <!-- endbuild -->
 </head>
 <body>
-  <header class="header">
-    <a class="logotype">noito</a>
-    <h3>playfull &amp; neat</h3>
-    <nav>
-      <a data-scroll class="btn" href="#about">about</a>
-      <a data-scroll class="btn" href="#current-work">work</a>
-      <a data-scroll class="btn" href="#contact">contact</a>
-    </nav>
-  </header>
+  <div id="app">
 
-  <section class="section" id="about">
-    <h1>Architect, designer &amp; developer</h1>
-    <h6>more is more</h6>
-    <div class="section__content">
-      <p>
-        Working across a range of services including exhibition, packaging, visual identity, editorial, printed and digital products design.
-      </p>
-      <p>
-        Architectural background backed by visual communication, graphic design, print production process and front-end development skills help provide effective and sharp solutions.
-      </p>
-      <p>
-        Check what I am currently working on, what I have done so far or just contact me right away.
-      </p>
-    </div>
-  </section>
+    <header>
+      <a class="logotype" href="http://noito.co">
+        <img srcset="images/noito_logo_2x.gif 2x" srcset="images/noito_logo_1x.gif 1x" src="images/noito_logo_1x.gif" alt="noito logo">
+      </a>
+      <h2>
+        playful &amp;&nbsp;neat
+      </h2>
+      <nav>
+        <a data-scroll class="btn" href="#about">about</a>
+        <a data-scroll class="btn" href="#current-work">work</a>
+        <a data-scroll class="btn" href="#contact">contact</a>
+      </nav>
+    </header> <!-- end header -->
 
-  <section class="section section--project" id="current-work">
-    <h1>
-      Currently happy working on
-    </h1>
-    <div class="section__content">
-      <div class="project">
-        <h3 class="project__title">
-          project title
-        </h3>
-        <div class="project__icons">
-
-        </div>
-        <p class="project__info">
-          project info
+    <section id="about">
+      <h1>
+        Architect, designer &amp;&nbsp;developer
+      </h1>
+      <h3>
+        more is more
+      </h3>
+      <div class="section__content">
+        <p>
+          Working across a range of services including exhibition, packaging, visual identity, editorial, printed and digital products design.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--statement"  id="info">
-    <p class="statement">
-      Imagine the feeling, the joy, when you use something smart &amp; delightful.<br> Are we there?
-    </p>
-    <p class="statement">
-      That is what I am always looking for!
-    </p>
-    <img src="" alt="">
-  </section>
-
-  <section class="section section--project" id="commercial-work">
-    <h1>
-      Selected commercial projects
-    </h1>
-    <div class="section__content">
-      <div class="project">
-        <h3 class="project__title">
-          project title
-        </h3>
-        <div class="project__icons">
-
-        </div>
-        <p class="project__info">
-          project info
+        <p>
+          Architectural background backed by visual communication, graphic design, print production process and front-end development skills help provide effective and sharp solutions.
         </p>
+        <p>
+          Check what I am <a data-scroll href="#current-work">currently working</a> on, what I <a data-scroll href="#finished-work">have done</a> so far or just <a data-scroll href="#contact">contact me</a> right away.
+        </p>
+      </div> <!-- end div.section__content -->
+    </section> <!-- end section#about -->
+
+    <section id="current-work">
+      <h1>
+        Currently happy working on
+      </h1>
+      <div class="section__content">
+        <article class="project">
+          <h2 class="project__title">
+            project title
+          </h2>
+          <div class="project__icons">
+
+          </div>
+          <p class="project__info">
+            project info
+          </p>
+        </article>
+      </div> <!-- end div.section__content -->
+    </section> <!-- end section#current-work -->
+
+    <aside id="statement">
+      <p>
+        Imagine the feeling, the joy, when you use something smart &amp; delightful.<br> Are we there?
+      </p>
+      <p>
+        That is what I am always looking for!
+      </p>
+      <img src="" alt="">
+    </aside> <!-- end aside -->
+
+    <section id="finished-work">
+      <h1>
+        Selected finished projects
+      </h1>
+      <div class="section__content">
+        <article class="project">
+          <h2 class="project__title">
+            project title
+          </h2>
+          <div class="project__icons">
+
+          </div>
+          <p class="project__info">
+            project info
+          </p>
+        </article>
+      </div> <!-- end div.section__content -->
+    </section> <!-- end section#finished-work -->
+
+    <section id="awards">
+      <h1>
+        Awards, exhibitions &amp; publications
+      </h1>
+      <h3>
+        happy moments
+      </h3>
+      <div class="section__content">
+
+      </div> <!-- end div.section__content -->
+    </section> <!-- end section#awards -->
+
+    <section id="concept-work">
+      <h1>
+        Fresh content
+      </h1>
+      <h3>
+        from <a href="https://www.instagram.com/noitostudio/">instagram</a>
+      </h3>
+      <div id="instagram">
+        instagram feed here
       </div>
-    </div>
-  </section>
+    </section> <!-- end section#concept-work -->
 
-  <section class="section"  id="awards">
-    <h1>
-      Awards, exhibitions &amp; publications
-    </h1>
-    <h6>
-      happy moments
-    </h6>
-    <div class="awards-logos">
+    <section id="contact">
+      <h1>
+        Hey! Let’s make something together
+      </h1>
+      <h3>
+        oh and my name is <strong>Tomek</strong>
+      </h3>
+      <img src="" alt="">
+      <p>
+        write at: <a href="mailto:info@noito.co">info@noito.co</a>
+      </p>
+      <p>
+        call on: <a href="tel:0048790213658">0048 790213658</a>
+      </p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/noitostudio/">instagram</a>
+        <a href="https://www.behance.net/noitostudio">behance</a>
+        <a href="https://github.com/fattombo">github</a>
+      </div>
+    </section> <!-- end section#contact -->
 
-    </div>
-  </section>
+    <footer>
+      <p>&copy; 2017 noito</p>
+      <a data-scroll class="btn" href="#app">up we go</a>
+    </footer> <!-- end footer -->
 
-  <section class="section section--project" id="instagram">
-    <h1>
-      Fresh content
-    </h1>
-    <h6>
-      from <a href="https://www.instagram.com/noitostudio/">instagram</a>
-    </h6>
-    <div id="instagram-feed">
-
-    </div>
-  </section>
-
-  <section class="section section--contact" id="contact">
-    <h1>
-      Hey! Let’s make something together
-    </h1>
-    <h6>
-      oh and my name is <strong>Tomek</strong>
-    </h6>
-    <img src="" alt="">
-    <p>
-      write at: <a href="mailto:info@noito.co">info@noito.co</a>
-    </p>
-    <p>
-      call on: <a href="tel:0048790213658">0048 790213658</a>
-    </p>
-    <div class="social-links">
-      <a href="https://www.instagram.com/noitostudio/">instagram</a>
-      <a href="https://www.behance.net/noitostudio">behance</a>
-      <a href="https://github.com/fattombo">github</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2017 noito</p>
-    <a href="">up we go</a>
-  </footer>
-
+  </div> <!-- end div#app -->
 </body>
 </html>

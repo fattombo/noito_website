@@ -48,37 +48,38 @@ $font-primary: 'suisse-mono', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @mixin type-title-h1 {
   font-family: 'gt-sectra';
   font-size: 2.125em; // 34px
-  font-weight: bold;
-  // letter-spacing: -0.5px;
   line-height: 1.1764705882; // 40px
+  font-weight: bold;
 }
 
-@mixin type-title-h3 {
+@mixin type-title-h2 {
   font-size: 1.125em; // 18px
   line-height: 1.7777777778; // 32px
 }
 
-@mixin type-title-h6 {
+@mixin type-title-h3 {
   font-size: 0.875em; // 14px
   line-height: 1.7142857143; // 24px
 }
 
 @mixin type-text-body {
   font-family: 'suisse', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1.125em; // 19px
+  font-size: 1.125em; // 18px
   line-height: 1.4736842105; // 28px
+  letter-spacing: 0.2px;
 }
 
 @mixin type-text-small {
-  font-size: 0.6875em; // 11px
-  letter-spacing: 0.5px;
-  line-height: 1.4545454545; // 16px
+  font-family: 'suisse', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.75em; // 12px
+  line-height: 2; // 24px
+  letter-spacing: 1px;
 }
 
 @mixin type-link {
   font-size: 0.875em; // 14px
-  letter-spacing: 1.5px;
   line-height: 1.7142857143; // 24px
+  letter-spacing: 0.5px;
 }
 
 // G R I D

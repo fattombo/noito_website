@@ -19,34 +19,28 @@ html {
 
 body {
   background-color: $color-bkg;
-  transition: background-color 2s;
 }
 
 a {
   color: $color-ui;
   text-decoration: none;
-
-  &:hover {
-    color: $color-bkg;
-    background-color: $color-ui;
-  }
-}
-
-button:focus {
-  outline: none;
-}
-
-.hidden {
-  display: none;
 }
 
 .btn {
+  @include type-link;
   display: inline-block;
   text-align: center;
-  width: 88px;
-  height: 32px;
-  border: 1px solid $color-ui;
+  padding: 3px 12px;
+  min-height: 32px;
   border-radius: 16px;
+  color: $color-bkg;
+  transition: color .6s,
+              background-color .5s;
+
+  &:hover {
+    color: $color-txt;
+    background-color: $color-bkg;
+  }
 }
 
 h1 {
@@ -54,13 +48,13 @@ h1 {
   margin-bottom: 40px;
 }
 
-h3 {
-  @include type-title-h3;
+h2 {
+  @include type-title-h2;
 
 }
 
-h6 {
-  @include type-title-h6;
+h3 {
+  @include type-title-h3;
   margin-bottom: 16px;
 }
 
@@ -69,52 +63,81 @@ p {
   margin-bottom: 16px;
 }
 
+.hidden {
+  display: none;
+}
+
 // H E A D E R
 // ---------------------------
 // ---------------------------
-.header {
+header {
+  position: relative;
   width: 100%;
   height: 100vh;
-  padding: 10px 16px 0;
+  padding: 12px 16px 0;
   background-image: url(../images/noito_play.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left bottom;
 
   .logotype {
-    @include type-title-h3;
-    color: $color-title;
+    opacity: .9;
+  }
+
+  h2 {
+    position: absolute;
+    top: 45%;
+    width: 50vw;
   }
 }
 
 nav {
   position: absolute;
-  bottom: 16px;
+  bottom: 8px;
+  margin-left: -8px;
 }
+
 // F O O T E R
 // ---------------------------
 // ---------------------------
 
-// S E C T I O N
+footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: $color-bkg-alt3;
+
+  p {
+    @include type-text-small;
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+}
+
+// S E C T I O N S
 // ---------------------------
 // ---------------------------
 
-.section {
-  padding: 32px 16px 64px;
+section {
+  padding: 24px 16px 56px;
 
-  &.section--project {
-    background-color: $color-bkg-alt1;
+  p:last-child {
+    margin-bottom: 0;
   }
+}
 
-  &.section--statement {
-    background-color: $color-bkg-alt2;
-  }
+#current-work,
+#finished-work,
+#concept-work {
+  background-color: $color-bkg-alt1;
+}
 
-  &.section--contact {
-    background-color: $color-bkg-alt3;
-    p {
-      font-family: $font-primary;
-    }
+#contact {
+  background-color: $color-bkg-alt3;
+
+  p {
+    font-family: 'suisse-mono';
   }
 }
 

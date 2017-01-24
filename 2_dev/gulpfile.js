@@ -59,7 +59,7 @@ gulp.task('browserSync', function() {
       baseDir: 'app'
     },
     // address http://[...].localtunnel.me
-    tunnel: "noito",
+    // tunnel: "noito",
     browser: 'google chrome'
   });
 });
