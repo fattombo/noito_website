@@ -113,6 +113,10 @@ footer {
     margin-top: 5px;
     margin-bottom: 0;
   }
+
+  a {
+    margin-right: -8px;
+  }
 }
 
 // S E C T I O N S
@@ -121,6 +125,10 @@ footer {
 
 section {
   padding: 24px 16px 56px;
+
+  &:last-of-type {
+    padding-bottom: 32px;
+  }
 
   p:last-child {
     margin-bottom: 0;
@@ -134,8 +142,11 @@ section {
 }
 
 #contact {
-  color: $color-txt;
   background-color: $color-bkg-alt3;
+
+  a {
+    color: $color-txt;
+  }
 
   p {
     font-family: 'suisse-mono';
@@ -148,10 +159,6 @@ section {
     }
   }
 
-  a {
-    color: inherit;
-  }
-
   .profile-img {
     opacity: .9;
     margin-bottom: 52px;
@@ -160,13 +167,19 @@ section {
   .social-links {
     text-align: center;
     margin-top: 32px;
+    padding-top: 24px;
     border-top: 1px solid $color-txt;
-    padding-top: 32px;
 
     a {
       display: inline-block;
-      margin-right: 8px;
-      margin-left: 8px;
+      margin-right: 4px;
+      margin-left: 4px;
+      padding: 8px;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: $color-bkg;
+      }
 
       img {
         display: block;
