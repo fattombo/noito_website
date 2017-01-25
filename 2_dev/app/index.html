@@ -69,19 +69,9 @@ including exhibition, packaging, visual identity, editorial, printed and digital
       <h1>
         Currently happy working on
       </h1>
-      <div class="section__content">
-        <article class="project">
-          <h2 class="project__title">
-            project title
-          </h2>
-          <div class="project__icons">
 
-          </div>
-          <p class="project__info">
-            project info
-          </p>
-        </article>
-      </div> <!-- end div.section__content -->
+      <project v-for="(project, index) in projects" v-if="!project.done" :data-index="index" :title="project.title" :info="project.info"></project>
+
     </section> <!-- end section#current-work -->
 
     <section id="statement">
@@ -98,19 +88,9 @@ including exhibition, packaging, visual identity, editorial, printed and digital
       <h1>
         Selected finished projects
       </h1>
-      <div class="section__content">
-        <article class="project">
-          <h2 class="project__title">
-            project title
-          </h2>
-          <div class="project__icons">
 
-          </div>
-          <p class="project__info">
-            project info
-          </p>
-        </article>
-      </div> <!-- end div.section__content -->
+      <project v-for="(project, index) in projects" v-if="project.done" :data-index="index" :title="project.title" :info="project.info"></project>
+
     </section> <!-- end section#finished-work -->
 
     <section id="awards">

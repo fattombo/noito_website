@@ -25,15 +25,37 @@ function get(url) {
 
 
 Vue.component('project', {
-  props: ['url', 'title'],
-  template: '<h3><a :href="url">{{ title }}</a></h3>'
+  props: ['title', 'icon', 'info'],
+  template: '<article class="project"> <h2 class="project__title"> {{ title }} </h2> <div class="project__icons"> {{ icon }} </div> <p class="project__info"> {{ info }} </p> </article>'
 })
 
 
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Vue test!'
+    message: 'Vue test!',
+    projects: [
+      { title: 'alfa_bet',
+        type: ['typography', 'digital'],
+        info: 'interactive fasade system based on a custom typeface',
+        done: false
+      },
+      { title: 'one two three',
+        type: ['digital'],
+        info: 'simple app for children based on Montessori methodology to help learn new words',
+        done: false
+      },
+      { title: '808,2 km',
+        type: ['print', 'product'],
+        info: 'history of a trip along Warta river with an old wooden camera',
+        done: true
+      },
+      { title: 'kolekcja wrzesińska',
+        type: ['print', 'product'],
+        info: 'an ongoing project of capturing the esense of the city through lenses of different artists',
+        done: true
+      }
+    ]
   }
 })
 

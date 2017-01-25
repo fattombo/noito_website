@@ -128,16 +128,10 @@ footer {
 // ---------------------------
 
 section {
-  padding: 24px 16px 64px;
+  padding: 24px 16px 32px;
 
   &:last-of-type {
-    padding-bottom: 32px;
-  }
-}
-
-#about {
-  p:last-child {
-    margin-bottom: -8px;
+    padding-bottom: 16px;
   }
 }
 
@@ -147,13 +141,22 @@ section {
   background-color: $color-bkg-alt1;
 }
 
+#current-work,
+#finished-work {
+  padding-bottom: 16px;
+
+  h1 {
+    margin-bottom: 72px;
+  }
+}
+
 #statement {
   background-color: $color-bkg-alt2;
 
   p {
     font-family: $font-primary;
     @include type-title-h3;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 }
 
@@ -214,4 +217,26 @@ section {
 .section__content {
   padding-top: 16px;
   border-top: 1px solid black;
+}
+
+
+// P R O J E C T
+// ---------------------------
+// ---------------------------
+
+.project {
+  padding-top: 12px;
+  padding-bottom: 32px;
+  border-top: 1px solid black;
+
+  .project__title {
+    @include type-title-h2;
+    color: $color-ui;
+    margin-bottom: 24px;
+  }
+
+  .project__info {
+    font-family: $font-primary;
+    @include type-title-h3;
+  }
 }
