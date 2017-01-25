@@ -21,6 +21,10 @@ body {
   background-color: $color-bkg;
 }
 
+img {
+  display: block;
+}
+
 a {
   color: $color-ui;
   text-decoration: none;
@@ -141,6 +145,17 @@ section {
   background-color: $color-bkg-alt1;
 }
 
+#concept-work {
+
+  .insta__pic {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 8px;
+    }
+  }
+}
+
 #contact {
   background-color: $color-bkg-alt3;
 
@@ -179,10 +194,6 @@ section {
 
       &:hover {
         background-color: $color-bkg;
-      }
-
-      img {
-        display: block;
       }
     }
   }
