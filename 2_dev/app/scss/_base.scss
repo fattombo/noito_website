@@ -128,14 +128,16 @@ footer {
 // ---------------------------
 
 section {
-  padding: 24px 16px 56px;
+  padding: 24px 16px 64px;
 
   &:last-of-type {
     padding-bottom: 32px;
   }
+}
 
+#about {
   p:last-child {
-    margin-bottom: 0;
+    margin-bottom: -8px;
   }
 }
 
@@ -145,13 +147,24 @@ section {
   background-color: $color-bkg-alt1;
 }
 
+#statement {
+  background-color: $color-bkg-alt2;
+
+  p {
+    font-family: $font-primary;
+    @include type-title-h3;
+    // color: $color-title-alt;
+    margin-bottom: 32px;
+  }
+}
+
 #concept-work {
 
   .insta__pic {
     margin-bottom: 16px;
 
     &:last-child {
-      margin-bottom: 8px;
+      margin-bottom: 0px;
     }
   }
 }

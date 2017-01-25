@@ -40,7 +40,7 @@ var app = new Vue({
 var feed = new Instafeed({
   get: 'user',
   userId: 'self',
-  accessToken: '1497992223.54da896.46ee4bcf6aa148b78d4b2899b6a2eca0',
+  accessToken: '1497992223.6d137b1.c5edfc696aca4cdd8116be94359c26d6',
   target: 'insta',
   resolution: 'standard_resolution',
   limit: 3,
@@ -49,12 +49,9 @@ var feed = new Instafeed({
     document.querySelector('.insta__load').style.display = 'none';
   },
   error: function() {
-    var el = document.querySelector('.insta__load');
-    if (el.textContent) {
-      el.textContent = 'oh my, it takes a little too long! probably an error has occured while loading instagram feed';
-    } else {
-      el.innerText = 'oh my, it takes a little too long! probably an error has occured while loading instagram feed';
-    }
+    var el    = document.querySelector('.insta__load');
+    var text  = 'oh my, it takes a little too long! probably an error has occured while loading instagram feed';
+    (el.textContent) ? el.textContent = text : el.innerText = text;
   }
 });
 feed.run();
