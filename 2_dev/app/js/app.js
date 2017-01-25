@@ -1,4 +1,5 @@
 smoothScroll.init();
+removeHover();
 
 function get(url) {
   return new Promise(function(resolve, reject) {
