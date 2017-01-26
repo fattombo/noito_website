@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: $color-bkg;
+  background-color: $color-bkg-alt3;
 }
 
 img {
@@ -118,7 +118,6 @@ footer {
   align-items: flex-start;
   justify-content: space-between;
   padding: 0 $side-padding 16px;
-  background-color: $color-bkg-alt3;
 
   p {
     @include type-text-small;
@@ -137,6 +136,7 @@ footer {
 
 section {
   padding: 24px $side-padding 32px;
+  background-color: $color-bkg;
 
   @include large {
     float: left;
@@ -165,16 +165,10 @@ section {
 
 #statement {
   color: $color-title-alt;
-  background-color: $color-bkg-alt2;
+  // background-color: $color-bkg-alt2;
 
-  p {
-    font-family: $font-primary;
-    @include type-title-h1;
-    margin-bottom: 24px;
-
-    &:last-of-type {
-      margin-bottom: 72px;
-    }
+  p:last-of-type {
+      margin-bottom: 48px;
   }
 }
 
