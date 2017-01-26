@@ -66,17 +66,14 @@ $font-display: 'gt-sectra', serif;
 }
 
 @mixin type-text-body {
-  // font-family: 'suisse', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.125em; // 18px
   line-height: 1.6666666667; // 30px
   letter-spacing: -0.2px;
 }
 
 @mixin type-text-small {
-  // font-family: 'suisse', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 0.75em; // 12px
-  line-height: 2; // 24px
-  letter-spacing: 1px;
+  font-size: 0.875em; // 14px
+  line-height: 1.7142857143; // 24px
 }
 
 @mixin type-link {

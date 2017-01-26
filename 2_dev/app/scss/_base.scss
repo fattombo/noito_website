@@ -33,10 +33,24 @@ a {
 .btn {
   @include type-link;
   display: inline-block;
-  text-align: center;
   padding: 3px 12px;
+  margin-bottom: 8px;
   min-height: 32px;
   border-radius: 16px;
+}
+
+.btn--std {
+  color: $color-ui;
+  transition: color .6s,
+              background-color .5s;
+
+  &:hover {
+    color: $color-bkg;
+    background-color: $color-txt;
+  }
+}
+
+.btn--alt {
   color: $color-bkg;
   transition: color .6s,
               background-color .5s;
@@ -81,6 +95,7 @@ p {
 header {
   position: relative;
   height: 100vh;
+  min-height: 320px;
   padding: 12px $side-padding 0;
   background-image: url(../images/noito_play.jpg);
   background-repeat: no-repeat;
@@ -98,14 +113,15 @@ header {
 
   h2 {
     position: absolute;
-    top: 45%;
-    width: 50vw;
+    right: 16px;
+    bottom: 32px;
   }
 }
 
 nav {
-  position: absolute;
-  bottom: 8px;
+  // position: absolute;
+  // top: 25%;
+  margin-top: 24px;
   margin-left: -8px;
 }
 
@@ -121,7 +137,7 @@ footer {
 
   p {
     @include type-text-small;
-    margin-top: 5px;
+    margin-top: 4px;
     margin-bottom: 0;
   }
 
