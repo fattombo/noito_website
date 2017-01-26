@@ -2,7 +2,7 @@
 // ---------------------------
 // ---------------------------
 $color-title:      #303030;
-$color-title-alt:  #EBAA0F;
+$color-title-alt:  #ebbc4c;
 $color-txt:        #303030;
 
 $color-ui:         #FF5C5C;
@@ -16,8 +16,8 @@ $color-bkg-alt3:   #FF5C5C;
 // ---------------------------
 // ---------------------------
 $tablet-width:   768px;
-$desktopXS-width: 1024px;
-$desktop-width:  1280px;
+$desktop-width: 1024px;
+$desktop-big-width:  1280px;
 
 @mixin medium {
   @media (min-width: $tablet-width) {
@@ -26,13 +26,13 @@ $desktop-width:  1280px;
 }
 
 @mixin large {
-  @media (min-width: $desktopXS-width) {
+  @media (min-width: $desktop-width) {
     @content;
   }
 }
 
 @mixin xlarge {
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-big-width) {
     @content;
   }
 }
@@ -41,15 +41,16 @@ $desktop-width:  1280px;
 // ---------------------------
 // ---------------------------
 @include font-face('gt-sectra', 'gt-sectra-display-bold', $weight: 'bold');
-@include font-face('suisse', 'SuisseIntl-Book-WebS');
+// @include font-face('suisse', 'SuisseIntl-Book-WebS');
 @include font-face('suisse-mono', 'SuisseIntlMono-Regular-WebS');
 
 $font-primary: 'suisse-mono', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-display: 'gt-sectra', serif;
 
 @mixin type-title-h1 {
-  font-family: 'gt-sectra';
-  font-size: 2.125em; // 34px
-  line-height: 1.1764705882; // 40px
+  font-family: $font-display;
+  font-size: 2em; // 32px
+  line-height: 1.25; // 40px
   font-weight: bold;
 }
 
@@ -64,14 +65,14 @@ $font-primary: 'suisse-mono', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 @mixin type-text-body {
-  font-family: 'suisse', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  // font-family: 'suisse', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.125em; // 18px
   line-height: 1.6666666667; // 28px
-  letter-spacing: 0.2px;
+  // letter-spacing: 0.1px;
 }
 
 @mixin type-text-small {
-  font-family: 'suisse', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  // font-family: 'suisse', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 0.75em; // 12px
   line-height: 2; // 24px
   letter-spacing: 1px;
@@ -86,6 +87,8 @@ $font-primary: 'suisse-mono', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 // G R I D
 // ---------------------------
 // ---------------------------
+$side-padding: 1em;
+
 .wrapper {
   position: relative;
   margin-right: auto;
