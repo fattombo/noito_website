@@ -24,38 +24,51 @@ function get(url) {
 }
 
 
-Vue.component('project', {
+Vue.component('projectTab', {
   props: ['title', 'icon', 'info'],
-  template: '<article class="project"> <h2 class="project__title"> {{ title }} </h2> <div class="project__icons"> {{ icon }} </div> <p class="project__info"> {{ info }} </p> </article>'
+  template: '\
+    <article class="project">\
+      <h2 class="project__title">{{ title }}</h2>\
+      <div :v-if="icon" class="project__icons">{{ icon }}</div>\
+      <p class="project__info">{{ info }}</p>\
+    </article>'
+})
+
+Vue.component('projectCard', {
+  props: ['title', 'info'],
+  template: '\
+    <div>\
+      <h1 class="">{{ title }}</h1>\
+      <p class="">{{ info }}</p>\
+    </div>'
 })
 
 
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Vue test!',
-    projects: [
-      { title: 'alfa_bet',
-        type: ['typography', 'digital'],
-        info: 'interactive fasade system based on a custom typeface',
-        done: false
-      },
-      { title: 'one two three',
-        type: ['digital'],
-        info: 'simple app for children based on Montessori methodology to help learn new words',
-        done: false
-      },
-      { title: '808,2 km',
-        type: ['print', 'product'],
-        info: 'history of a trip along Warta river with an old wooden camera',
-        done: true
-      },
-      { title: 'kolekcja wrzesińska',
-        type: ['print', 'product'],
-        info: 'an ongoing project of capturing the esense of the city through lenses of different artists',
-        done: true
-      }
-    ]
+    upload: false,
+    showcase: false,
+    projects: []
+  },
+  created: function () {
+    var self = this;
+    get('work_data.json')
+      .then(function (response) {
+        self.projects = JSON.parse(response);
+        if (!self.upload) {
+          self.upload = true;
+        }
+      })
+      .catch(function (er) {
+        console.log(er);
+      });
+  },
+  methods: {
+    toggleShow: function(e) {
+      this.showcase = !this.showcase;
+      console.log(e.target);
+    }
   }
 })
 

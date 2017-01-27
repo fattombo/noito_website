@@ -253,7 +253,7 @@ section {
   align-items: flex-start;
 
   > img {
-    flex: 0 1 auto;
+    // flex: 0 1 auto;
     padding: 0 8px 40px;
     margin: auto;
   }
@@ -268,6 +268,8 @@ section {
   padding-top: 12px;
   padding-bottom: 32px;
   border-top: 1px solid black;
+  cursor: pointer;
+  transition: background .5s;
 
   .project__title {
     @include type-title-h2;
@@ -279,4 +281,41 @@ section {
     font-family: $font-primary;
     @include type-title-h3;
   }
+
+  &:hover {
+
+    .project__title {
+      text-decoration: underline;
+    }
+  }
+}
+
+.project__card {
+  z-index: 100;
+  padding: $side-padding;
+  height: 100%;
+  width: 100%;
+  transform: translateX(100%);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $color-bkg-alt2;
+  transition: transform 1s;
+}
+
+.btn__close {
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.project__card--show {
+  transform: translateX(0%);
 }

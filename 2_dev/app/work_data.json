@@ -1,0 +1,44 @@
+[
+  {
+    "title": "alfa_bet",
+    "type": [
+      "typography",
+      "digital"
+    ],
+    "shortInfo": "interactive fasade system based on a custom typeface",
+    "longInfo": "more about the project",
+    "tasks": [
+      "design",
+      "development",
+      "product"
+    ],
+    "finished": false,
+    "images": [
+      {
+        "title": "img title",
+        "alt": "alternative text"
+      }
+    ]
+    },
+  {
+    "title": "alfa_bet",
+    "type": [
+      "typography",
+      "digital"
+    ],
+    "shortInfo": "interactive fasade system based on a custom typeface",
+    "longInfo": "more about the project",
+    "tasks": [
+      "design",
+      "development",
+      "product"
+    ],
+    "finished": false,
+    "images": [
+      {
+        "title": "img title",
+        "alt": "alternative text"
+      }
+    ]
+  }
+]
