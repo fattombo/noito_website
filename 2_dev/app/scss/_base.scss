@@ -114,7 +114,7 @@ header {
   h2 {
     position: absolute;
     right: 16px;
-    bottom: 32px;
+    bottom: 16px;
   }
 }
 
@@ -245,6 +245,18 @@ section {
 .section__content {
   padding-top: 16px;
   border-top: 1px solid black;
+}
+
+.section__content--flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  > img {
+    flex: 0 1 auto;
+    padding: 0 8px 40px;
+    margin: auto;
+  }
 }
 
 
