@@ -58,7 +58,7 @@ Vue.component('projectInfo', {
         <h1 class="info__title">{{ project.title }}</h1>\
         <p class="info__text--short">{{ project.shortInfo }}</p>\
         <p class="info__text--long">{{ project.longInfo }}</p>\
-        <div><img class="info__img" v-for="image in project.images" :src="\'images/projects/\' + image.title + \'.jpg\'"></div>\
+        <div><img class="info__img" v-for="image in project.images" :src="\'images/projects/\' + image.title + image.type"></div>\
       </div>\
     </transition>'
 });
@@ -93,11 +93,13 @@ var app = new Vue({
       } else {
         this.number = index;
       }
+      document.documentElement.style.overflow = 'hidden';
     },
     hide: function() {
       if (this.showcase) {
         this.showcase = false;
       }
+      document.documentElement.style.overflow = 'auto';
     }
   }
 });

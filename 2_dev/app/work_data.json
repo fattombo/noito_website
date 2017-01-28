@@ -16,7 +16,8 @@
     "images": [
       {
         "title": "alfabet_01",
-        "alt": "alternative text"
+        "alt": "alternative text",
+        "type": ".gif"
       }
     ]
     },
@@ -37,11 +38,13 @@
     "images": [
       {
         "title": "boaa_01",
-        "alt": "alternative text"
+        "alt": "alternative text",
+        "type": ".jpg"
       },
       {
         "title": "boaa_02",
-        "alt": "alternative text"
+        "alt": "alternative text",
+        "type": ".jpg"
       }
     ]
   }
