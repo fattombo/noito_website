@@ -57,8 +57,9 @@ Vue.component('projectInfo', {
       <div class="project__info">\
         <h1 class="info__title">{{ project.title }}</h1>\
         <p class="info__text--short">{{ project.shortInfo }}</p>\
-        <p class="info__text--long">{{ project.longInfo }}</p>\
         <div><img class="info__img" v-for="image in project.images" :src="\'images/projects/\' + image.title + image.type"></div>\
+        <p class="info__text--long">{{ project.longInfo }}</p>\
+        <div><p v-for="task in project.tasks">{{ task }}</p></div>\
       </div>\
     </transition>'
 });

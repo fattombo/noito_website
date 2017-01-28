@@ -47,5 +47,61 @@
         "type": ".jpg"
       }
     ]
+  },
+  {
+    "title": "Topography of Silence",
+    "type": [
+      "print"
+    ],
+    "shortInfo": "\"Topography of Silence\" is an extensive topographic record of polish landowners history.",
+    "longInfo": "Massive, solid plate with embossed typographic structure. It is a reminder of Polish manor houses, the landowners, an important element of Polish national heritage. This album is a tribute to the landowners that history has condemned to extinction.",
+    "tasks": [
+      "book design",
+      "preparation for printing ",
+      "print supervision"
+    ],
+    "finished": true,
+    "images": [
+      {
+        "title": "topo_01",
+        "alt": "album cover",
+        "type": ".jpg"
+      },
+      {
+        "title": "topo_02",
+        "alt": "cover typographic structure",
+        "type": ".gif"
+      },
+      {
+        "title": "topo_03",
+        "alt": "album spread",
+        "type": ".jpg"
+      },
+      {
+        "title": "topo_04",
+        "alt": "photography form the album",
+        "type": ".jpg"
+      },
+      {
+        "title": "topo_05",
+        "alt": "photography form the album",
+        "type": ".jpg"
+      },
+      {
+        "title": "topo_06",
+        "alt": "album detail",
+        "type": ".jpg"
+      },
+      {
+        "title": "topo_07",
+        "alt": "album detail",
+        "type": ".jpg"
+      },
+      {
+        "title": "topo_08",
+        "alt": "album cover",
+        "type": ".jpg"
+      }
+    ]
   }
 ]
