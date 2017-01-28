@@ -15,6 +15,8 @@ html {
   color: $color-txt;
   // prevent font scaling on horizontal
   -webkit-text-size-adjust: none;
+
+  // overflow: hidden;
 }
 
 body {
@@ -295,7 +297,7 @@ section {
   padding: $side-padding;
   height: 100%;
   width: 100%;
-  transform: translateX(100%);
+  transform: translateX(0%);
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -305,6 +307,43 @@ section {
   bottom: 0;
   background-color: $color-bkg-alt2;
   transition: transform 1s;
+
+  @include large {
+    width: 50%;
+  }
+}
+
+// @keyframes dupa {
+//   from {
+//     transform: translateY(-16px);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+
+.project__info {
+
+  .info__title {
+
+  }
+
+  .info__text {
+
+    &--short {
+
+    }
+
+    &--long {
+      margin-bottom: 32px;
+    }
+  }
+
+  .info__img {
+    margin-bottom: 16px;
+  }
 }
 
 .btn__close {
@@ -316,6 +355,42 @@ section {
   cursor: pointer;
 }
 
-.project__card--show {
-  transform: translateX(0%);
+// .project__card--show {
+//   transform: translateX(0%);
+// }
+
+
+// @keyframes dupa {
+//   from {
+//     transform: translateY(-16px);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+//
+// .move-in {
+//   animation-name: dupa;
+//   animation-duration: 1s;
+// }
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all .3s ease;
+}
+
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for <2.1.8 */ {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  transform: translateY(-16px);
+  opacity: 0;
 }

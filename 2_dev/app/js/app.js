@@ -5,7 +5,6 @@ function get(url) {
   return new Promise(function(resolve, reject) {
     var req = new XMLHttpRequest();
     req.open('GET', url);
-
     req.onload = function() {
       if (req.status == 200) {
         resolve(req.response);
@@ -14,34 +13,55 @@ function get(url) {
         reject(Error(req.statusText));
       }
     };
-
     req.onerror = function() {
       reject(Error("Network Error"));
     };
-
     req.send();
   });
 }
 
 
 Vue.component('projectTab', {
-  props: ['title', 'icon', 'info'],
+  props: ['title', 'icon', 'info', 'address'],
   template: '\
-    <article class="project">\
+    <article @click="show" class="project">\
       <h2 class="project__title">{{ title }}</h2>\
       <div :v-if="icon" class="project__icons">{{ icon }}</div>\
       <p class="project__info">{{ info }}</p>\
-    </article>'
-})
+    </article>',
+  data: function() {
+    return {
+      index: this.address
+    }
+  },
+  methods: {
+    show: function() {
+      // console.log(this.index);
+      this.$emit('show', this.index);
+    }
+  }
+});
 
 Vue.component('projectCard', {
-  props: ['title', 'info'],
   template: '\
-    <div>\
-      <h1 class="">{{ title }}</h1>\
-      <p class="">{{ info }}</p>\
+    <div class="project__card">\
+      <div @click="$emit(\'hide\')" class="btn__close"><img src="images/close.svg" alt="close"></div>\
+      <slot></slot>\
     </div>'
-})
+});
+
+Vue.component('projectInfo', {
+  props: ['project'],
+  template: '\
+    <transition name="fade">\
+      <div class="project__info">\
+        <h1 class="info__title">{{ project.title }}</h1>\
+        <p class="info__text--short">{{ project.shortInfo }}</p>\
+        <p class="info__text--long">{{ project.longInfo }}</p>\
+        <div><img class="info__img" v-for="image in project.images" :src="\'images/projects/\' + image.title + \'.jpg\'"></div>\
+      </div>\
+    </transition>'
+});
 
 
 var app = new Vue({
@@ -49,6 +69,7 @@ var app = new Vue({
   data: {
     upload: false,
     showcase: false,
+    number: null,
     projects: []
   },
   created: function () {
@@ -65,12 +86,21 @@ var app = new Vue({
       });
   },
   methods: {
-    toggleShow: function(e) {
-      this.showcase = !this.showcase;
-      console.log(e.target);
+    show: function(index) {
+      if (!this.showcase) {
+        this.showcase = true;
+        this.number = index;
+      } else {
+        this.number = index;
+      }
+    },
+    hide: function() {
+      if (this.showcase) {
+        this.showcase = false;
+      }
     }
   }
-})
+});
 
 
 var feed = new Instafeed({

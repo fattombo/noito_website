@@ -15,19 +15,19 @@
     "finished": false,
     "images": [
       {
-        "title": "img title",
+        "title": "alfabet_01",
         "alt": "alternative text"
       }
     ]
     },
   {
-    "title": "alfa_bet",
+    "title": "boaa website",
     "type": [
       "typography",
       "digital"
     ],
-    "shortInfo": "interactive fasade system based on a custom typeface",
-    "longInfo": "more about the project",
+    "shortInfo": "super duper website",
+    "longInfo": "oh my god what a website",
     "tasks": [
       "design",
       "development",
@@ -36,7 +36,11 @@
     "finished": false,
     "images": [
       {
-        "title": "img title",
+        "title": "boaa_01",
+        "alt": "alternative text"
+      },
+      {
+        "title": "boaa_02",
         "alt": "alternative text"
       }
     ]
