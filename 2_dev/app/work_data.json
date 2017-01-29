@@ -6,7 +6,9 @@
       "digital"
     ],
     "shortInfo": "interactive fasade system based on a custom typeface",
-    "longInfo": "more about the project",
+    "longInfo": [
+      "more about the project"
+    ],
     "tasks": [
       "design",
       "development",
@@ -24,11 +26,12 @@
   {
     "title": "boaa website",
     "type": [
-      "typography",
       "digital"
     ],
     "shortInfo": "super duper website",
-    "longInfo": "oh my god what a website",
+    "longInfo": [
+      "oh my god what a website"
+    ],
     "tasks": [
       "design",
       "development",
@@ -54,7 +57,10 @@
       "print"
     ],
     "shortInfo": "\"Topography of Silence\" is an extensive topographic record of polish landowners history.",
-    "longInfo": "Massive, solid plate with embossed typographic structure. It is a reminder of Polish manor houses, the landowners, an important element of Polish national heritage. This album is a tribute to the landowners that history has condemned to extinction.",
+    "longInfo": [
+        "Massive, solid plate with embossed typographic structure. It is a reminder of Polish manor houses, the landowners, an important element of Polish national heritage.",
+        "This album is a tribute to the landowners that history has condemned to extinction."
+      ],
     "tasks": [
       "book design",
       "preparation for printing ",

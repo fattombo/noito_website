@@ -55,11 +55,21 @@ Vue.component('projectInfo', {
   template: '\
     <transition name="fade">\
       <div class="project__info">\
+        <div class="info__cat">\
+          <ul>\
+            <li v-for="category in project.type">{{ category }}</li>\
+          </ul>\
+        </div>\
         <h1 class="info__title">{{ project.title }}</h1>\
         <p class="info__text--short">{{ project.shortInfo }}</p>\
-        <div><img class="info__img" v-for="image in project.images" :src="\'images/projects/\' + image.title + image.type"></div>\
-        <p class="info__text--long">{{ project.longInfo }}</p>\
-        <div><p v-for="task in project.tasks">{{ task }}</p></div>\
+        <div class="info__img"><img v-for="image in project.images" :src="\'images/projects/\' + image.title + image.type"></div>\
+        <p v-for="text in project.longInfo" class="info__text--long">{{ text }}</p>\
+        <div class="info__task">\
+          <p>what I did:</p>\
+          <ul>\
+            <li v-for="task in project.tasks">{{ task }}</li>\
+          </ul>\
+        </div>\
       </div>\
     </transition>'
 });

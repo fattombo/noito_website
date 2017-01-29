@@ -246,7 +246,7 @@ section {
 
 .section__content {
   padding-top: 16px;
-  border-top: 1px solid black;
+  border-top: 1px solid $color-txt;
 }
 
 .section__content--flex {
@@ -269,7 +269,7 @@ section {
 .project {
   padding-top: 12px;
   padding-bottom: 32px;
-  border-top: 1px solid black;
+  border-top: 1px solid $color-txt;
   cursor: pointer;
   transition: background .5s;
 
@@ -326,6 +326,21 @@ section {
 
 .project__info {
 
+  li {
+    @include type-text-small;
+    margin-bottom: 8px;
+  }
+
+  .info__cat {
+    width: 80%;
+    margin-bottom: 56px;
+
+    li {
+      display: inline-block;
+      margin-right: 16px;
+    }
+  }
+
   .info__title {
 
   }
@@ -333,7 +348,7 @@ section {
   .info__text {
 
     &--short {
-
+      margin-bottom: 24px;
     }
 
     &--long {
@@ -342,7 +357,23 @@ section {
   }
 
   .info__img {
-    margin-bottom: 16px;
+      margin-bottom: 64px;
+
+    > * {
+      margin-bottom: 16px;
+    }
+  }
+
+  .info__task {
+    border-top: 1px solid $color-txt;
+    padding-top: 16px;
+    margin-top: 64px;
+    margin-bottom: 48px;
+
+    li::before {
+      content: "+";
+      margin-right: 16px;
+    }
   }
 }
 
@@ -350,7 +381,7 @@ section {
   width: 20px;
   height: 20px;
   position: fixed;
-  top: 16px;
+  top: 18px;
   right: 16px;
   cursor: pointer;
 }

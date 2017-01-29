@@ -201,10 +201,7 @@ including exhibition, packaging, visual identity, editorial, printed and digital
 
     <transition name="slide-fade">
       <project-card v-if="showcase" @hide="hide">
-        <!-- <div @click="hide" class="btn__close"><img src="images/close.svg" alt="close"></div> -->
-        <!-- <transition name="fade"> -->
           <project-info :project="projects[number]"></project-info>
-        <!-- </transition> -->
       </project-card>
     </transition>
 
