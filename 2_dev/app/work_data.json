@@ -18,11 +18,11 @@
     "images": [
       {
         "title": "alfabet_01",
-        "alt": "alternative text",
+        "alt": "",
         "type": ".gif"
       }
     ]
-    },
+  },
   {
     "title": "boaa website",
     "type": [
@@ -40,13 +40,217 @@
     "finished": false,
     "images": [
       {
-        "title": "boaa_01",
+        "title": "boaa-web_01",
         "alt": "alternative text",
         "type": ".jpg"
       },
       {
         "title": "boaa_02",
-        "alt": "alternative text",
+        "alt": "",
+        "type": ".jpg"
+      }
+    ]
+  },
+  {
+    "title": "one two three app",
+    "type": [
+      "digital"
+    ],
+    "shortInfo": "super duper app",
+    "longInfo": [
+      "oh my god what an app"
+    ],
+    "tasks": [
+      "design",
+      "development",
+      "product"
+    ],
+    "finished": false,
+    "images": [
+      {
+        "title": "ott_01",
+        "alt": "",
+        "type": ".jpg"
+      }
+    ]
+  },
+  {
+    "title": "shoe seller",
+    "type": [
+      "digital"
+    ],
+    "shortInfo": "super duper app",
+    "longInfo": [
+      "oh my god what an app"
+    ],
+    "tasks": [
+      "design",
+      "development",
+      "product"
+    ],
+    "finished": false,
+    "images": [
+      {
+        "title": "shoe_01",
+        "alt": "",
+        "type": ".jpg"
+      }
+    ]
+  },
+  {
+    "title": "aeternum",
+    "type": [
+      "print"
+    ],
+    "shortInfo": "book about a photographic journey through the undiscovered meadows",
+    "longInfo": [
+      "oh my god what a book"
+    ],
+    "tasks": [
+      "design",
+      "photo edit",
+      "preparation for printing"
+    ],
+    "finished": false,
+    "images": [
+      {
+        "title": "aeternum_01",
+        "alt": "",
+        "type": ".jpg"
+      }
+    ]
+  },
+  {
+    "title": "Wiadomości Wrzesińskie",
+    "type": [
+      "type",
+      "print",
+      "digital"
+    ],
+    "shortInfo": "Rebrand, redesign and new digital products development",
+    "longInfo": [
+        "Add text..."
+      ],
+    "tasks": [
+      "brand design"
+    ],
+    "finished": true,
+    "images": [
+      {
+        "title": "ww_01",
+        "alt": "",
+        "type": ".jpg"
+      }
+    ]
+  },
+  {
+    "title": "Grupa Projekt",
+    "type": [
+      "print",
+      "product"
+    ],
+    "shortInfo": "brand and products for a educational startup",
+    "longInfo": [
+        "Add text..."
+      ],
+    "tasks": [
+      "brand design",
+      "product design"
+    ],
+    "finished": true,
+    "images": [
+      {
+        "title": "grupa_01",
+        "alt": "",
+        "type": ".jpg"
+      }
+    ]
+  },
+  {
+    "title": "b o a a",
+    "type": [
+      "print"
+    ],
+    "shortInfo": "brand for architactural studio",
+    "longInfo": [
+        "Add text..."
+      ],
+    "tasks": [
+      "brand"
+    ],
+    "finished": true,
+    "images": [
+      {
+        "title": "boaa-brand_01",
+        "alt": "",
+        "type": ".jpg"
+      }
+    ]
+  },
+  {
+    "title": "Parking",
+    "type": [
+      "type"
+    ],
+    "shortInfo": "Signage and wayfinding system for an underground parking",
+    "longInfo": [
+        "Add text..."
+      ],
+    "tasks": [
+      "type design"
+    ],
+    "finished": true,
+    "images": [
+      {
+        "title": "parking_01",
+        "alt": "",
+        "type": ".jpg"
+      }
+    ]
+  },
+  {
+    "title": "Strajk Dzieci Wrzesińkich",
+    "type": [
+      "print",
+      "product"
+    ],
+    "shortInfo": "Board game ",
+    "longInfo": [
+        "Add text..."
+      ],
+    "tasks": [
+      "game design",
+      "preparation for print"
+    ],
+    "finished": true,
+    "images": [
+      {
+        "title": "strajk_01",
+        "alt": "",
+        "type": ".jpg"
+      }
+    ]
+  },
+  {
+    "title": "808,2 km",
+    "type": [
+      "print",
+      "product"
+    ],
+    "shortInfo": "Personal photographic journey along the Warta river",
+    "longInfo": [
+        "Add text..."
+      ],
+    "tasks": [
+      "book design",
+      "preparation for print",
+      "exhibition design"
+    ],
+    "finished": true,
+    "images": [
+      {
+        "title": "808km_01",
+        "alt": "",
         "type": ".jpg"
       }
     ]
@@ -63,7 +267,7 @@
       ],
     "tasks": [
       "book design",
-      "preparation for printing ",
+      "preparation for printing",
       "print supervision"
     ],
     "finished": true,
@@ -106,6 +310,56 @@
       {
         "title": "topo_08",
         "alt": "album cover",
+        "type": ".jpg"
+      }
+    ]
+  },
+  {
+    "title": "Kolekcja wrzesińska",
+    "type": [
+      "print",
+      "product"
+    ],
+    "shortInfo": "Kolekcja wrzesińska is an ongoing photographic project about Września town",
+    "longInfo": [
+        "Add text..."
+      ],
+    "tasks": [
+      "book design",
+      "preparation for printing",
+      "print supervision",
+      "exhibition design"
+    ],
+    "finished": true,
+    "images": [
+      {
+        "title": "kw_01",
+        "alt": "",
+        "type": ".jpg"
+      }
+    ]
+  },
+  {
+    "title": "Bękart",
+    "type": [
+      "type",
+      "print"
+    ],
+    "shortInfo": "Book about a man with a very big dick",
+    "longInfo": [
+        "Add text..."
+      ],
+    "tasks": [
+      "book design",
+      "type design",
+      "poster design",
+      "preparation for print"
+    ],
+    "finished": true,
+    "images": [
+      {
+        "title": "bekart_01",
+        "alt": "",
         "type": ".jpg"
       }
     ]
