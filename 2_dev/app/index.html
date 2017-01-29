@@ -74,11 +74,11 @@ including exhibition, packaging, visual identity, editorial, printed and digital
 
       <div v-if="upload">
         <project-tab v-for="(project, index) in projects"
-                 v-if="!project.finished"
-                 @show="show"
-                :address="index"
-                :title="project.title"
-                :info="project.shortInfo"></project-tab>
+                     v-if="!project.finished"
+                    @show="show"
+                    :project="project"
+                    :index="index">
+        </project-tab>
       </div>
 
     </section> <!-- end section#current-work -->
@@ -100,11 +100,11 @@ including exhibition, packaging, visual identity, editorial, printed and digital
 
       <div v-if="upload">
         <project-tab v-for="(project, index) in projects"
-                 v-if="project.finished"
-                 @show="show"
-                :address="index"
-                :title="project.title"
-                :info="project.shortInfo"></project-tab>
+                     v-if="project.finished"
+                    @show="show"
+                    :project="project"
+                    :index="index">
+        </project-tab>
       </div>
 
     </section> <!-- end section#finished-work -->

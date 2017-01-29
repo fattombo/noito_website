@@ -266,28 +266,49 @@ section {
 // ---------------------------
 // ---------------------------
 
-.project {
+.project__tab {
+  position: relative;
   padding-top: 12px;
   padding-bottom: 32px;
   border-top: 1px solid $color-txt;
   cursor: pointer;
-  transition: background .5s;
 
-  .project__title {
+  .tab__title {
     @include type-title-h2;
     color: $color-ui;
     margin-bottom: 24px;
+    width: 75%;
   }
 
-  .project__info {
+  .tab__type {
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 25%;
+    text-align: right;
+
+    li {
+      display: inline-block;
+      margin-left: 16px;
+    }
+  }
+
+  .tab__info {
     font-family: $font-primary;
     @include type-title-h3;
+    transition: color .2s;
   }
 
   &:hover {
 
-    .project__title {
-      text-decoration: underline;
+    .tab__title::before {
+      content: "→";
+      display: inline-block;
+      margin-right: 16px;
+    }
+
+    .tab__info {
+      color: $color-ui;
     }
   }
 }

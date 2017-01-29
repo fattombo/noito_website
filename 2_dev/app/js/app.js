@@ -22,22 +22,27 @@ function get(url) {
 
 
 Vue.component('projectTab', {
-  props: ['title', 'icon', 'info', 'address'],
+  props: ['project', 'index'],
   template: '\
-    <article @click="show" class="project">\
-      <h2 class="project__title">{{ title }}</h2>\
-      <div :v-if="icon" class="project__icons">{{ icon }}</div>\
-      <p class="project__info">{{ info }}</p>\
+    <article @click="show" class="project__tab">\
+      <h2 class="tab__title">{{ project.title }}</h2>\
+      <div class="tab__type">\
+        <ul>\
+          <li v-for="type in project.type">\
+            <img :src="\'images/picto/\' + type + \'.svg\'">\
+          </li>\
+        </ul>\
+      </div>\
+      <p class="tab__info">{{ project.shortInfo }}</p>\
     </article>',
   data: function() {
     return {
-      index: this.address
+      id: this.index
     }
   },
   methods: {
     show: function() {
-      // console.log(this.index);
-      this.$emit('show', this.index);
+      this.$emit('show', this.id);
     }
   }
 });
@@ -62,7 +67,9 @@ Vue.component('projectInfo', {
         </div>\
         <h1 class="info__title">{{ project.title }}</h1>\
         <p class="info__text--short">{{ project.shortInfo }}</p>\
-        <div class="info__img"><img v-for="image in project.images" :src="\'images/projects/\' + image.title + image.type"></div>\
+        <div class="info__img">\
+          <img v-for="image in project.images" :src="\'images/projects/\' + image.title + image.type">\
+        </div>\
         <p v-for="text in project.longInfo" class="info__text--long">{{ text }}</p>\
         <div class="info__task">\
           <p>what I did:</p>\
