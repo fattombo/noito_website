@@ -303,51 +303,54 @@ a {
 }
 
 
-// P R O J E C T
+// P R O J E C T   T A B
 // ---------------------------
 // ---------------------------
 
-.project__tab {
+.project-tab {
   position: relative;
   padding-top: 12px;
   padding-bottom: 32px;
   border-top: 1px solid $color-txt;
   cursor: pointer;
 
-  .tab__title {
+  &:last-child {
+    border-bottom: 1px solid $color-txt;
+  }
+
+  @at-root #{&}__title {
     @include type-title-mid;
     color: $color-ui;
     margin-bottom: 24px;
     width: 75%;
   }
 
-  .tab__type {
+  @at-root #{&}__type {
     position: absolute;
     top: 18px;
     right: 0;
     width: 25%;
     text-align: right;
-
-    li {
-      display: inline-block;
-      margin-left: 8px;
-    }
   }
 
-  .tab__info {
-    font-family: $font-primary;
-    @include type-title-sub;
+  @at-root #{&}__icon {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @at-root #{&}__info {
+    @include type-text-small;
   }
 
   &:hover {
 
-    .tab__title::before {
+    .project-tab__title::before {
       content: "→";
       display: inline-block;
       margin-right: 16px;
     }
 
-    .tab__info {
+    .project-tab__info {
       color: $color-ui;
     }
   }
@@ -355,7 +358,9 @@ a {
 
 
 
-
+// P R O J E C T   C A R D
+// ---------------------------
+// ---------------------------
 
 .project__card {
   z-index: 100;

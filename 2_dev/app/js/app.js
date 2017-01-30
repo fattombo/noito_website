@@ -24,27 +24,17 @@ function get(url) {
 Vue.component('projectTab', {
   props: ['project', 'index'],
   template: '\
-    <article @click="show" class="project__tab">\
-      <h2 class="tab__title">{{ project.title }}</h2>\
-      <div class="tab__type">\
+    <article @click="$emit(\'show\', index)" class="project-tab">\
+      <h2 class="project-tab__title">{{ project.title }}</h2>\
+      <div class="project-tab__type">\
         <ul>\
-          <li v-for="type in project.type">\
+          <li v-for="type in project.type" class="project-tab__icon">\
             <img :src="\'images/picto/\' + type + \'.svg\'">\
           </li>\
         </ul>\
       </div>\
-      <p class="tab__info">{{ project.shortInfo }}</p>\
-    </article>',
-  data: function() {
-    return {
-      id: this.index
-    }
-  },
-  methods: {
-    show: function() {
-      this.$emit('show', this.id);
-    }
-  }
+      <p class="project-tab__info">{{ project.shortInfo }}</p>\
+    </article>'
 });
 
 Vue.component('projectCard', {

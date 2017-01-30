@@ -82,13 +82,13 @@ including exhibition, packaging, visual identity, editorial, printed and digital
 
       <section class="section section--project" id="current-work">
 
-        <header class="section__header">
+        <header class="section__header section__header--noline">
           <h1 class="section__title section__title--nosub">
             Currently happy working on
           </h1>
         </header>
 
-        <div class="section__content">
+        <div class="section__content section__content--notop">
           <template v-if="upload">
             <project-tab v-for="(project, index) in projects"
                          v-if="project.show && !project.finished"
@@ -120,12 +120,12 @@ including exhibition, packaging, visual identity, editorial, printed and digital
     <div class="flex-wrapper">
 
       <section class="section section--project" id="finished-work">
-        <header class="section__header">
+        <header class="section__header section__header--noline">
           <h1 class="section__title section__title--nosub">
             Selected finished projects
           </h1>
         </header>
-        <div class="section__content">
+        <div class="section__content section__content--notop">
           <template v-if="upload">
             <project-tab v-for="(project, index) in projects"
                          v-if="project.show && project.finished"
