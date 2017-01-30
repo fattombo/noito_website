@@ -41,13 +41,12 @@ $desktop-big-width:  1280px;
 // ---------------------------
 // ---------------------------
 @include font-face('gt-sectra', 'gt-sectra-display-bold', $weight: 'bold');
-// @include font-face('suisse', 'SuisseIntl-Book-WebS');
 @include font-face('suisse-mono', 'SuisseIntlMono-Regular-WebS');
 
 $font-primary: 'suisse-mono', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-display: 'gt-sectra', serif;
 
-@mixin type-title-h1 {
+@mixin type-title-big {
   font-family: $font-display;
   font-size: 2em; // 32px
   line-height: 1.25; // 40px
@@ -55,28 +54,33 @@ $font-display: 'gt-sectra', serif;
   font-weight: bold;
 }
 
-@mixin type-title-h2 {
+@mixin type-title-mid {
+  font-family: $font-primary;
   font-size: 1.125em; // 18px
   line-height: 1.7777777778; // 32px
 }
 
-@mixin type-title-h3 {
+@mixin type-title-sub {
+  font-family: $font-primary;
   font-size: 0.875em; // 14px
   line-height: 1.7142857143; // 24px
 }
 
 @mixin type-text-body {
+  font-family: $font-primary;
   font-size: 1.125em; // 18px
   line-height: 1.6666666667; // 30px
   letter-spacing: -0.2px;
 }
 
 @mixin type-text-small {
+  font-family: $font-primary;
   font-size: 0.875em; // 14px
   line-height: 1.7142857143; // 24px
 }
 
 @mixin type-link {
+  font-family: $font-primary;
   font-size: 0.875em; // 14px
   line-height: 1.7142857143; // 24px
   letter-spacing: 0.5px;
@@ -85,30 +89,62 @@ $font-display: 'gt-sectra', serif;
 // G R I D
 // ---------------------------
 // ---------------------------
-$side-padding: 1em;
+
+@mixin padding($top, $side, $bottom) {
+  padding: $top $side $bottom;
+
+  @include medium {
+    padding: 2*$top 2*$side 2*$bottom;
+  }
+}
 
 .wrapper {
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 10px;
-  @include clearfix;
+  // @include clearfix;
 
-  @include medium {
-    max-width: 700px;
-  }
+  // @include medium {
+  //   max-width: 700px;
+  // }
+  //
+  // @include large {
+  //   padding: 0;
+  //   max-width: 900px;
+  // }
+  //
+  // @include xlarge {
+  //   padding: 0;
+  //   max-width: 1200px;
+  // }
+}
+
+.wrapper--flex {
 
   @include large {
-    padding: 0;
-    max-width: 900px;
-  }
-
-  @include xlarge {
-    padding: 0;
-    max-width: 1200px;
+    display: flex;
   }
 }
 
 // A N I M A T I O N S
 // ---------------------------
 // ---------------------------
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all .3s ease;
+}
+
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for <2.1.8 */ {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  transform: translateY(-16px);
+  opacity: 0;
+}

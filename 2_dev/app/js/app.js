@@ -72,7 +72,7 @@ Vue.component('projectInfo', {
         </div>\
         <p v-for="text in project.longInfo" class="info__text--long">{{ text }}</p>\
         <div class="info__task">\
-          <p>what I did:</p>\
+          <p>tasks and responsibilities:</p>\
           <ul>\
             <li v-for="task in project.tasks">{{ task }}</li>\
           </ul>\
@@ -130,7 +130,11 @@ var feed = new Instafeed({
   target: 'insta',
   resolution: 'standard_resolution',
   limit: 3,
-  template: '<div class="insta__pic"><a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{caption}}"></a></div>',
+  template: '<div class="picture">\
+              <a href="{{link}}" target="_blank">\
+                <img src="{{image}}" alt="{{caption}}">\
+              </a>\
+            </div>',
   success: function() {
     document.querySelector('.insta__load').style.display = 'none';
   },

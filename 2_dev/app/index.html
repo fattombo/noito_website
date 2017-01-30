@@ -31,176 +31,245 @@ including exhibition, packaging, visual identity, editorial, printed and digital
 <body>
   <div id="app">
 
-    <header>
-      <a class="logotype" href="http://noito.co">
-        <img srcset="images/noito_logo_2x.gif 2x" srcset="images/noito_logo_1x.gif 1x" src="images/noito_logo_1x.gif" alt="noito logo">
-      </a>
-      <nav>
-        <ul>
-          <li><a data-scroll class="btn btn--std" href="#about">about</a></li>
-          <li><a data-scroll class="btn btn--std" href="#current-work">work</a></li>
-          <li><a data-scroll class="btn btn--std" href="#contact">contact</a></li>
-        </ul>
-      </nav>
-      <h2>
-        dsgn &amp; dev
-      </h2>
-    </header> <!-- end header -->
+    <div class="flex-wrapper">
 
-    <section id="about">
-      <h1>
-        Architect, designer &amp;&nbsp;developer
-      </h1>
-      <h3>
-        more is more
-      </h3>
-      <div class="section__content">
-        <p>
-          Working across a range of disciplines including exhibition, packaging, visual identity, editorial, printed and digital products design.
-        </p>
-        <p>
-          Architectural background backed by visual communication, graphic design, print production process and front-end development skills help provide effective and engaging solutions.
-        </p>
-        <p>
-          Check what I am <a data-scroll href="#current-work">working</a> on, what I <a data-scroll href="#finished-work">have done</a> so far or just <a data-scroll href="#contact">contact me</a> right away.
-        </p>
-      </div> <!-- end div.section__content -->
-    </section> <!-- end section#about -->
+      <header class="header">
+        <a class="header__logo" href="http://noito.co">
+          <img srcset="images/noito_logo_2x.gif 2x" srcset="images/noito_logo_1x.gif 1x" src="images/noito_logo_1x.gif" alt="noito logo">
+        </a>
+        <nav class="header__nav">
+          <ul>
+            <li>
+              <a data-scroll class="btn btn--std" href="#about">about</a>
+            </li>
+            <li>
+              <a data-scroll class="btn btn--std" href="#current-work">work</a>
+            </li>
+            <li>
+              <a data-scroll class="btn btn--std" href="#contact">contact</a>
+            </li>
+          </ul>
+        </nav>
+        <h2 class="header__title">
+          dsgn &amp; dev
+        </h2>
+      </header> <!-- end header -->
 
-    <section id="current-work">
-      <h1>
-        Currently happy working on
-      </h1>
+      <section class="section" id="about">
+        <header class="section__header">
+          <h1 class="section__title">
+            Architect, designer &amp;&nbsp;developer
+          </h1>
+          <h3 class="section__subtitle">
+            more is more
+          </h3>
+        </header>
+        <div class="section__content">
+          <p class="text">
+            Working across a range of disciplines including exhibition, packaging, visual identity, editorial, printed and digital products design.
+          </p>
+          <p class="text">
+            Architectural background backed by visual communication, graphic design, print production process and front-end development skills help provide effective and engaging solutions.
+          </p>
+          <p class="text">
+            Check what I am <a class="link" data-scroll href="#current-work">working</a> on, what I <a class="link" data-scroll href="#finished-work">have done</a> so far or just <a class="link" data-scroll href="#contact">contact me</a> right away.
+          </p>
+        </div> <!-- end div.section__content -->
+      </section> <!-- end section#about -->
+    </div>
 
-      <div v-if="upload">
-        <project-tab v-for="(project, index) in projects"
-                     v-if="!project.finished"
-                    @show="show"
-                    :project="project"
-                    :index="index">
-        </project-tab>
-      </div>
+    <div class="flex-wrapper">
 
-    </section> <!-- end section#current-work -->
+      <section class="section section--project" id="current-work">
 
-    <section id="statement">
-      <p>
-        Imagine the feeling, the joy, when you see or use something smart &amp;&nbsp;slick. Are we there?
-      </p>
-      <p>
-        That is what I am always looking for!
-      </p>
-      <img src="images/noito_show.gif" alt="">
-    </section> <!-- end aside -->
+        <header class="section__header">
+          <h1 class="section__title section__title--nosub">
+            Currently happy working on
+          </h1>
+        </header>
 
-    <section id="finished-work">
-      <h1>
-        Selected finished projects
-      </h1>
-
-      <div v-if="upload">
-        <project-tab v-for="(project, index) in projects"
-                     v-if="project.finished"
-                    @show="show"
-                    :project="project"
-                    :index="index">
-        </project-tab>
-      </div>
-
-    </section> <!-- end section#finished-work -->
-
-    <section id="awards">
-      <h1>
-        Awards, exhibitions &amp;&nbsp;publications
-      </h1>
-      <h3>
-        happy moments
-      </h3>
-      <div class="section__content section__content--flex">
-        <img srcset="images/logos/projekt_roku_2x.png 2x"
-             srcset="images/logos/projekt_roku_1x.png 1x"
-                src="images/logos/projekt_roku_1x.png" alt="the design of the year logotype">
-        <img srcset="images/logos/foto_publikacja_2x.png 2x"
-             srcset="images/logos/foto_publikacja_1x.png 1x"
-                src="images/logos/foto_publikacja_1x.png" alt="photo publication of the year logotype">
-        <img srcset="images/logos/tokyo_design_2x.png 2x"
-             srcset="images/logos/tokyo_design_1x.png 1x"
-                src="images/logos/tokyo_design_1x.png" alt="tokyo design week logotype">
-        <img srcset="images/logos/sofia_design_2x.png 2x"
-             srcset="images/logos/sofia_design_1x.png 1x"
-                src="images/logos/sofia_design_1x.png" alt="sofia design week logotype">
-        <img srcset="images/logos/lodz_design_2x.png 2x"
-             srcset="images/logos/lodz_design_1x.png 1x"
-                src="images/logos/lodz_design_1x.png" alt="lodz design festival logotype">
-        <img srcset="images/logos/arena_design_2x.png 2x"
-             srcset="images/logos/arena_design_1x.png 1x"
-                src="images/logos/arena_design_1x.png" alt="arena design festival logotype">
-        <img srcset="images/logos/moma_2x.png 2x"
-             srcset="images/logos/moma_1x.png 1x"
-                src="images/logos/moma_1x.png" alt="museum of modern art in warsaw logotype">
-        <img srcset="images/logos/print_control_2x.png 2x"
-             srcset="images/logos/print_control_1x.png 1x"
-                src="images/logos/print_control_1x.png" alt="museum of modern art in warsaw logotype">
-        <img srcset="images/logos/2plus3d_2x.png 2x"
-             srcset="images/logos/2plus3d_1x.png 1x"
-                src="images/logos/2plus3d_1x.png" alt="2plus3d magazine logotype">
-        <img srcset="images/logos/bec_zmiana_2x.png 2x"
-             srcset="images/logos/bec_zmiana_1x.png 1x"
-                src="images/logos/bec_zmiana_1x.png" alt="bęc zmiana foundation logotype">
-      </div> <!-- end div.section__content -->
-    </section> <!-- end section#awards -->
-
-    <section id="concept-work">
-      <h1>
-        Fresh concepts
-      </h1>
-      <h3>
-        find more <a href="https://www.instagram.com/noitostudio/" target="_blank">here</a>
-      </h3>
-      <div id="insta">
-        <!-- instagram feed through instafeed -->
-        <div class="insta__load">
-          loading...
+        <div class="section__content">
+          <template v-if="upload">
+            <project-tab v-for="(project, index) in projects"
+                         v-if="project.show && !project.finished"
+                        @show="show"
+                        :project="project"
+                        :index="index">
+            </project-tab>
+          </template>
         </div>
-      </div>
-    </section> <!-- end section#concept-work -->
 
-    <section id="contact">
-      <h1>
-        Hey! Let’s make something together
-      </h1>
-      <h3>
-        oh and my name is <span>Tomek</span>
-      </h3>
-      <div class="profile-img">
-        <img src="images/tomek_profile.jpg" alt="Tomek Wojciechowski">
-      </div>
-      <p>
-        write at: <a href="mailto:info@noito.co">info@noito.co</a>
-      </p>
-      <p>
-        call on: <a href="tel:0048790213658">0048 790213658</a>
-      </p>
-      <div class="social-links">
-        <a href="https://www.instagram.com/noitostudio/" target="_blank">
-          <img srcset="images/instagram_2x.png 2x" srcset="images/instagram_1x.png 1x" src="images/instagram_1x.png" alt="instagram link icon">
-        </a>
-        <a href="https://www.behance.net/noitostudio" target="_blank">
-          <img srcset="images/behance_2x.png 2x" srcset="images/behance_1x.png 1x" src="images/behance_1x.png" alt="behance link icon">
-        </a>
-        <a href="https://github.com/fattombo" target="_blank">
-          <img srcset="images/github_2x.png 2x"  srcset="images/github_1x.png 1x" src="images/github_1x.png" alt="github link icon">
-        </a>
-      </div>
-    </section> <!-- end section#contact -->
+      </section> <!-- end section#current-work -->
 
-    <footer>
-      <p>&copy; noito</p>
+      <section class="section">
+        <p class="section__text">
+          Imagine the feeling, the joy, when you see or use something smart &amp;&nbsp;slick. Are we there?
+        </p>
+        <p class="section__text">
+          That is what I am always looking for!
+        </p>
+        <div class="section__content">
+          <figure class="picture">
+            <img src="images/noito_show.gif" alt="">
+          </figure>
+        </div>
+      </section> <!-- end aside -->
+
+    </div>
+
+    <div class="flex-wrapper">
+
+      <section class="section section--project" id="finished-work">
+        <header class="section__header">
+          <h1 class="section__title section__title--nosub">
+            Selected finished projects
+          </h1>
+        </header>
+        <div class="section__content">
+          <template v-if="upload">
+            <project-tab v-for="(project, index) in projects"
+                         v-if="project.show && project.finished"
+                        @show="show"
+                        :project="project"
+                        :index="index">
+            </project-tab>
+          </template>
+        </div>
+
+      </section> <!-- end section#finished-work -->
+
+      <section class="section">
+        <header class="section__header">
+          <h1 class="section__title">
+            Awards, exhibitions &amp;&nbsp;publications
+          </h1>
+          <h3 class="section__subtitle">
+            happy moments
+          </h3>
+        </header>
+        <div class="section__content section__content--flex">
+          <figure class="logo-award">
+            <img srcset="images/logos/projekt_roku_2x.png 2x"
+               srcset="images/logos/projekt_roku_1x.png 1x"
+                  src="images/logos/projekt_roku_1x.png" alt="the design of the year logotype">
+          </figure>
+          <figure class="logo-award">
+            <img srcset="images/logos/foto_publikacja_2x.png 2x"
+               srcset="images/logos/foto_publikacja_1x.png 1x"
+                  src="images/logos/foto_publikacja_1x.png" alt="photo publication of the year logotype">
+          </figure>
+          <figure class="logo-award">
+            <img srcset="images/logos/tokyo_design_2x.png 2x"
+               srcset="images/logos/tokyo_design_1x.png 1x"
+                  src="images/logos/tokyo_design_1x.png" alt="tokyo design week logotype">
+          </figure>
+          <figure class="logo-award">
+            <img srcset="images/logos/sofia_design_2x.png 2x"
+               srcset="images/logos/sofia_design_1x.png 1x"
+                  src="images/logos/sofia_design_1x.png" alt="sofia design week logotype">
+          </figure>
+          <figure class="logo-award">
+            <img srcset="images/logos/lodz_design_2x.png 2x"
+               srcset="images/logos/lodz_design_1x.png 1x"
+                  src="images/logos/lodz_design_1x.png" alt="lodz design festival logotype">
+          </figure>
+          <figure class="logo-award">
+            <img srcset="images/logos/arena_design_2x.png 2x"
+               srcset="images/logos/arena_design_1x.png 1x"
+                  src="images/logos/arena_design_1x.png" alt="arena design festival logotype">
+          </figure>
+          <figure class="logo-award">
+            <img srcset="images/logos/moma_2x.png 2x"
+               srcset="images/logos/moma_1x.png 1x"
+                  src="images/logos/moma_1x.png" alt="museum of modern art in warsaw logotype">
+          </figure>
+          <figure class="logo-award">
+            <img srcset="images/logos/print_control_2x.png 2x"
+               srcset="images/logos/print_control_1x.png 1x"
+                  src="images/logos/print_control_1x.png" alt="museum of modern art in warsaw logotype">
+          </figure>
+          <figure class="logo-award">
+            <img srcset="images/logos/2plus3d_2x.png 2x"
+               srcset="images/logos/2plus3d_1x.png 1x"
+                  src="images/logos/2plus3d_1x.png" alt="2plus3d magazine logotype">
+          </figure>
+          <figure class="logo-award">
+            <img srcset="images/logos/bec_zmiana_2x.png 2x"
+               srcset="images/logos/bec_zmiana_1x.png 1x"
+                  src="images/logos/bec_zmiana_1x.png" alt="bęc zmiana foundation logotype">
+          </figure>
+        </div> <!-- end div.section__content -->
+      </section> <!-- end section#awards -->
+
+    </div>
+
+    <div class="flex-wrapper">
+
+      <section class="section section--project">
+        <header class="section__header section__header--noline">
+          <h1 class="section__title">
+            Fresh content
+          </h1>
+          <h3 class="section__subtitle">
+            find more <a href="https://www.instagram.com/noitostudio/" target="_blank">here</a>
+          </h3>
+        </header>
+        <div class="section__content section__content--notop" id="insta">
+          <!-- instagram feed through instafeed -->
+          <div class="insta__load">
+            loading...
+          </div>
+        </div>
+      </section> <!-- end section#concept-work -->
+
+      <section class="section section--contact" id="contact">
+        <header class="section__header section__header--noline">
+          <h1 class="section__title">
+            Hey! Let’s make something together
+          </h1>
+          <h3 class="section__subtitle">
+            oh and my name is <span class="section__subtitle--underline">Tomek</span>
+          </h3>
+        </header>
+
+        <div class="section__content section__content--notop">
+          <div class="profile-picture">
+            <img src="images/tomek_profile.jpg" alt="Tomek Wojciechowski">
+          </div>
+          <div class="contact-links">
+            <p class="contact-links__item">
+              write at: <a class="link link--alt" href="mailto:info@noito.co">info@noito.co</a>
+            </p>
+            <p class="contact-links__item">
+              call on: <a class="link link--alt" href="tel:0048790213658">0048 790213658</a>
+            </p>
+          </div>
+          <div class="social-links">
+            <a class="social-links__item" href="https://www.instagram.com/noitostudio/" target="_blank">
+              <img srcset="images/instagram_2x.png 2x" srcset="images/instagram_1x.png 1x" src="images/instagram_1x.png" alt="">
+            </a>
+            <!-- <a class="social-links__item" href="https://www.behance.net/noitostudio" target="_blank">
+              <img srcset="images/behance_2x.png 2x" srcset="images/behance_1x.png 1x" src="images/behance_1x.png" alt="">
+            </a> -->
+            <a class="social-links__item" href="https://github.com/fattombo" target="_blank">
+              <img srcset="images/github_2x.png 2x"  srcset="images/github_1x.png 1x" src="images/github_1x.png" alt="">
+            </a>
+          </div>
+        </div>
+
+      </section> <!-- end section#contact -->
+
+    </div>
+
+    <footer class="footer">
+      <p class="footer__info">&copy; noito</p>
       <a data-scroll class="btn btn--alt" href="#app">up we go</a>
     </footer> <!-- end footer -->
 
+    <!-- project showcase -->
     <transition name="slide-fade">
-      <project-card v-if="showcase" @hide="hide">
+      <project-card v-if="showcase"
+                   @hide="hide">
           <project-info :project="projects[number]"></project-info>
       </project-card>
     </transition>

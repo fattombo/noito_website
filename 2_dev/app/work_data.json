@@ -1,5 +1,6 @@
 [
   {
+    "show": true,
     "title": "alfa_bet",
     "type": [
       "type",
@@ -24,6 +25,7 @@
     ]
   },
   {
+    "show": true,
     "title": "boaa website",
     "type": [
       "digital"
@@ -52,6 +54,7 @@
     ]
   },
   {
+    "show": true,
     "title": "one two three app",
     "type": [
       "digital"
@@ -75,6 +78,7 @@
     ]
   },
   {
+    "show": false,
     "title": "shoe seller",
     "type": [
       "digital"
@@ -98,6 +102,7 @@
     ]
   },
   {
+    "show": false,
     "title": "aeternum",
     "type": [
       "print"
@@ -121,6 +126,7 @@
     ]
   },
   {
+    "show": true,
     "title": "Wiadomości Wrzesińskie",
     "type": [
       "type",
@@ -144,6 +150,7 @@
     ]
   },
   {
+    "show": true,
     "title": "Grupa Projekt",
     "type": [
       "print",
@@ -167,6 +174,7 @@
     ]
   },
   {
+    "show": true,
     "title": "b o a a",
     "type": [
       "print"
@@ -188,6 +196,7 @@
     ]
   },
   {
+    "show": true,
     "title": "Parking",
     "type": [
       "type"
@@ -209,6 +218,7 @@
     ]
   },
   {
+    "show": true,
     "title": "Strajk Dzieci Wrzesińkich",
     "type": [
       "print",
@@ -232,6 +242,7 @@
     ]
   },
   {
+    "show": true,
     "title": "808,2 km",
     "type": [
       "print",
@@ -256,6 +267,7 @@
     ]
   },
   {
+    "show": true,
     "title": "Topography of Silence",
     "type": [
       "print"
@@ -315,6 +327,7 @@
     ]
   },
   {
+    "show": false,
     "title": "Kolekcja wrzesińska",
     "type": [
       "print",
@@ -340,6 +353,7 @@
     ]
   },
   {
+    "show": true,
     "title": "Bękart",
     "type": [
       "type",
