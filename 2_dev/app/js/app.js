@@ -39,9 +39,11 @@ Vue.component('projectTab', {
 
 Vue.component('projectCard', {
   template: '\
-    <div class="project__card">\
-      <div @click="$emit(\'hide\')" class="btn__close"><img src="images/close.svg" alt="close"></div>\
-      <slot></slot>\
+    <div class="project-card">\
+      <div @click="$emit(\'hide\')" class="btn-close"><img src="images/close.svg" alt="close"></div>\
+      <div class="wrapper">\
+        <slot></slot>\
+      </div>\
     </div>'
 });
 
@@ -49,22 +51,22 @@ Vue.component('projectInfo', {
   props: ['project'],
   template: '\
     <transition name="fade">\
-      <div class="project__info">\
-        <div class="info__cat">\
+      <div>\
+        <div class="project-card__topinfo">\
           <ul>\
-            <li v-for="category in project.type">{{ category }}</li>\
+            <li class="project-card__category" v-for="category in project.type">{{ category }}</li>\
           </ul>\
         </div>\
-        <h1 class="info__title">{{ project.title }}</h1>\
-        <p class="info__text--short">{{ project.shortInfo }}</p>\
-        <div class="info__img">\
-          <img v-for="image in project.images" :src="\'images/projects/\' + image.title + image.type">\
+        <h1 class="project-card__title">{{ project.title }}</h1>\
+        <p class="project-card__text">{{ project.shortInfo }}</p>\
+        <div class="project-card__pictures">\
+          <img class="picture" v-for="image in project.images" :src="\'images/projects/\' + image.title + image.type">\
         </div>\
-        <p v-for="text in project.longInfo" class="info__text--long">{{ text }}</p>\
-        <div class="info__task">\
-          <p>tasks and responsibilities:</p>\
+        <p v-for="text in project.longInfo" class="project-card__text">{{ text }}</p>\
+        <div class="project-card__bottominfo">\
+          <h3 class="project-card__text">responsibilities:</h3>\
           <ul>\
-            <li v-for="task in project.tasks">{{ task }}</li>\
+            <li class="project-card__task" v-for="task in project.tasks">{{ task }}</li>\
           </ul>\
         </div>\
       </div>\
@@ -120,16 +122,16 @@ var feed = new Instafeed({
   target: 'insta',
   resolution: 'standard_resolution',
   limit: 3,
-  template: '<div class="picture">\
+  template: '<div class="picture picture--insta">\
               <a href="{{link}}" target="_blank">\
                 <img src="{{image}}" alt="{{caption}}">\
               </a>\
             </div>',
   success: function() {
-    document.querySelector('.insta__load').style.display = 'none';
+    document.querySelector('.js-insta-loading').style.display = 'none';
   },
   error: function() {
-    var el    = document.querySelector('.insta__load');
+    var el    = document.querySelector('.js-insta-loading');
     var text  = 'oh my, it takes a little too long! probably an error has occured while loading instagram feed';
     (el.textContent) ? el.textContent = text : el.innerText = text;
   }

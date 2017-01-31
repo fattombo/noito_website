@@ -22,30 +22,6 @@ a {
   color: $color-ui;
 }
 
-// h1 {
-//   @include type-title-big;
-//   margin-bottom: 40px;
-// }
-
-// h2 {
-//   @include type-title-mid;
-//
-// }
-
-// h3 {
-//   @include type-title-sub;
-//   margin-bottom: 12px;
-//
-//   span {
-//     text-decoration: underline;
-//   }
-// }
-
-// p {
-//   @include type-text-body;
-//   margin-bottom: 16px;
-// }
-
 // H E A D E R
 // ---------------------------
 // ---------------------------
@@ -64,7 +40,13 @@ a {
   background-position: left bottom;
 
   @include large {
+    height: auto;
+    min-height: 100vh;
     width: 50%;
+    padding-top: 40px;
+  }
+  @include xlarge {
+    padding-top: 56px;
   }
 
   @at-root #{&}__logo {
@@ -76,7 +58,7 @@ a {
     // margin-left: -8px;
 
     @include medium {
-      margin-top: 48px;
+      margin-top: 64px;
     }
   }
 
@@ -88,7 +70,7 @@ a {
 
     @include medium {
       right: 32px;
-      bottom: 32px;
+      bottom: 30px;
     }
   }
 }
@@ -108,6 +90,13 @@ a {
   color: $color-txt;
   background-color: $color-bkg-alt3;
 
+  @include large {
+    position: absolute;
+    width: 50%;
+    max-height: 85px;
+    margin-top: -85px;
+  }
+
   @at-root #{&}__info {
     @include type-text-small;
     margin-top: 4px;
@@ -118,11 +107,24 @@ a {
 // ---------------------------
 // ---------------------------
 
+.flex-switch-large {
+  :first-child {
+    order: 2;
+  }
+  :last-child {
+    order: 1;
+  }
+}
+
 .section {
   @include padding(24px, 16px, 32px);
 
   color: $color-txt;
   background-color: $color-bkg;
+
+  @include medium {
+    @include clearfix;
+  }
 
   @include large {
     width: 50%;
@@ -135,6 +137,10 @@ a {
 
   @at-root #{&}--contact {
     background-color: $color-bkg-alt3;
+
+    @include medium {
+      padding-bottom: 0;
+    }
   }
 
 
@@ -170,6 +176,7 @@ a {
 
   @at-root #{&}__text {
     @include type-text-body;
+    margin-top: 4px;
     margin-bottom: 16px;
 
     color: $color-title-alt;
@@ -228,11 +235,28 @@ a {
   @include medium {
     margin-bottom: 32px;
   }
-}
 
-.profile-picture {
-  opacity: .9;
-  margin-bottom: 52px;
+  @at-root #{&}--insta {
+    @include large {
+      display: none;
+
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+
+  @at-root #{&}--awards {
+    display: none;
+
+    @include large {
+      display: block;
+      margin-top: 120px;
+    }
+    @include xlarge {
+      margin-top: 80px;
+    }
+  }
 }
 
 .logo-award {
@@ -241,12 +265,39 @@ a {
   margin: auto;
 }
 
+.profile-picture {
+  opacity: .9;
+  margin-bottom: 52px;
+
+  @include medium {
+    float: left;
+    width: 40%;
+  }
+  @include large {
+    float: right;
+    width: 40%;
+  }
+}
+
 .contact-links {
   @include type-text-body;
   // margin-bottom: 16px;
 
   @at-root #{&}__item {
     margin-bottom: 8px;
+  }
+
+  @include medium {
+    float: left;
+    width: 50%;
+    margin-left: 10%;
+    padding-top: 16px;
+    border-top: 1px solid $color-txt;
+  }
+  @include large {
+    float: right;
+    margin-left: 0;
+    margin-right: 10%;
   }
 }
 
@@ -266,6 +317,19 @@ a {
     &:hover {
       background-color: $color-bkg;
     }
+  }
+
+  @include medium {
+    float: left;
+    width: 50%;
+    margin-top: 64px;
+    margin-left: 10%;
+  }
+  @include large {
+    clear: both;
+    margin-top: 32px;
+    margin-left: 0;
+    width: 100%;
   }
 }
 
@@ -362,85 +426,105 @@ a {
 // ---------------------------
 // ---------------------------
 
-.project__card {
-  z-index: 100;
-  padding: 16px;
-  height: 100%;
-  width: 100%;
-  transform: translateX(0%);
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
+.project-card {
   position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+
+  @include padding(16px, 16px, 24px);
+
+  transform: translateX(0%);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+
   background-color: $color-bkg-alt2;
   transition: transform 1s;
 
   @include large {
     width: 50%;
   }
-}
 
-.project__info {
 
-  li {
-    @include type-text-small;
-    margin-bottom: 8px;
-  }
-
-  .info__cat {
+  @at-root #{&}__topinfo {
     width: 80%;
     margin-bottom: 56px;
-
-    li {
-      display: inline-block;
-      margin-right: 16px;
-    }
   }
 
-  .info__title {
-
+  @at-root #{&}__category {
+    @include type-text-small;
+    display: inline-block;
+    margin-right: 16px;
   }
 
-  .info__text {
+  @at-root #{&}__title {
+    @include type-title-big;
+    margin-bottom: 24px;
 
-    &--short {
-      margin-bottom: 24px;
-    }
-
-    &--long {
+    @include medium {
       margin-bottom: 32px;
     }
   }
 
-  .info__img {
-      margin-bottom: 64px;
+  @at-root #{&}__text {
+    @include type-text-body;
+    margin-bottom: 32px;
 
-    > * {
-      margin-bottom: 16px;
+    @include medium {
+      margin-bottom: 48px;
     }
   }
 
-  .info__task {
+  @at-root #{&}__pictures {
+    margin-bottom: 32px;
+
+    @include medium {
+      margin-bottom: 48px;
+    }
+  }
+
+  @at-root #{&}__bottominfo {
     border-top: 1px solid $color-txt;
     padding-top: 16px;
     margin-top: 64px;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
+  }
 
-    li::before {
+  @at-root #{&}__task {
+    margin-bottom: 8px;
+
+    &::before {
       content: "+";
       margin-right: 16px;
     }
   }
 }
 
-.btn__close {
-  width: 20px;
-  height: 20px;
+.btn-close {
   position: fixed;
   top: 18px;
   right: 16px;
+  width: 32px;
+  height: 32px;
+  z-index: 200;
+
+  border-radius: 50%;
   cursor: pointer;
+
+  &:hover {
+    background-color: $color-ui;
+  }
+
+  @include medium {
+    top: 54px;
+    right: 64px;
+  }
+  @include large {
+    top: 32px;
+    right: 48px;
+  }
 }

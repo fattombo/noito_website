@@ -17,7 +17,7 @@ $color-bkg-alt3:   #FF5C5C;
 // ---------------------------
 $tablet-width:   768px;
 $desktop-width: 1024px;
-$desktop-big-width:  1280px;
+$desktop-big-width:  1400px;
 
 @mixin medium {
   @media (min-width: $tablet-width) {
@@ -52,18 +52,38 @@ $font-display: 'gt-sectra', serif;
   line-height: 1.25; // 40px
   letter-spacing: -0.2px;
   font-weight: bold;
+
+  @include medium {
+    font-size: 2.5em;
+    letter-spacing: 0.2px;
+  }
+  @include xlarge {
+    font-size: 3em;
+    letter-spacing: 0.2px;
+  }
 }
 
 @mixin type-title-mid {
   font-family: $font-primary;
   font-size: 1.125em; // 18px
   line-height: 1.7777777778; // 32px
+
+  @include medium {
+    font-size: 1.25em; // 20px
+  }
+  @include xlarge {
+    font-size: 1.375em; // 22px
+  }
 }
 
 @mixin type-title-sub {
   font-family: $font-primary;
   font-size: 0.875em; // 14px
   line-height: 1.7142857143; // 24px
+
+  @include medium {
+    font-size: 1em;
+  }
 }
 
 @mixin type-text-body {
@@ -71,12 +91,24 @@ $font-display: 'gt-sectra', serif;
   font-size: 1.125em; // 18px
   line-height: 1.6666666667; // 30px
   letter-spacing: -0.2px;
+
+  @include medium {
+    font-size: 1.25em;
+    letter-spacing: 0;
+  }
+  @include xlarge {
+    font-size: 1.375em; // 22px
+  }
 }
 
 @mixin type-text-small {
   font-family: $font-primary;
   font-size: 0.875em; // 14px
   line-height: 1.7142857143; // 24px
+
+  @include medium {
+    font-size: 1em;
+  }
 }
 
 @mixin type-link {
@@ -84,6 +116,10 @@ $font-display: 'gt-sectra', serif;
   font-size: 0.875em; // 14px
   line-height: 1.7142857143; // 24px
   letter-spacing: 0.5px;
+
+  @include medium {
+    font-size: 1em;
+  }
 }
 
 // G R I D
@@ -94,7 +130,13 @@ $font-display: 'gt-sectra', serif;
   padding: $top $side $bottom;
 
   @include medium {
-    padding: 2*$top 2*$side 2*$bottom;
+    padding: 3*$top 4*$side 3*$bottom;
+  }
+  @include large {
+    padding: 1.5*$top 3*$side 2*$bottom;
+  }
+  @include xlarge {
+    padding: 2*$top 4*$side 2*$bottom;
   }
 }
 
@@ -102,27 +144,29 @@ $font-display: 'gt-sectra', serif;
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  // @include clearfix;
+  @include clearfix;
 
-  // @include medium {
-  //   max-width: 700px;
-  // }
-  //
-  // @include large {
-  //   padding: 0;
-  //   max-width: 900px;
-  // }
-  //
-  // @include xlarge {
-  //   padding: 0;
-  //   max-width: 1200px;
-  // }
+  @include medium {
+    max-width: 640px;
+  }
 }
 
 .wrapper--flex {
 
   @include large {
     display: flex;
+  }
+}
+
+.hidden-large {
+  @include large {
+    display: none;
+  }
+}
+
+.show-large {
+  @include large {
+    display: inline;
   }
 }
 
