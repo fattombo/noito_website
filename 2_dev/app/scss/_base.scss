@@ -556,4 +556,8 @@ a {
     top: 32px;
     right: 48px;
   }
+  @include large {
+    top: 40px;
+    right: 64px;
+  }
 }

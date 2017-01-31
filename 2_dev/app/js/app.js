@@ -39,9 +39,7 @@ var n = (function() {
     template: '\
       <div class="project-card">\
         <div @click="$emit(\'hide\')" class="btn-close"><img src="images/close.svg" alt="close"></div>\
-        <div class="wrapper">\
           <slot></slot>\
-        </div>\
       </div>'
   });
 
@@ -50,22 +48,28 @@ var n = (function() {
     template: '\
       <transition name="fade">\
         <div>\
-          <div class="project-card__topinfo">\
-            <ul>\
-              <li class="project-card__category" v-for="category in project.type">{{ category }}</li>\
-            </ul>\
+          <div class="wrapper--wide">\
+            <div class="project-card__topinfo">\
+              <ul>\
+                <li class="project-card__category" v-for="category in project.type">{{ category }}</li>\
+              </ul>\
+            </div>\
           </div>\
-          <h1 class="project-card__title">{{ project.title }}</h1>\
-          <p class="project-card__text">{{ project.shortInfo }}</p>\
-          <div class="project-card__pictures">\
+          <div class="wrapper">\
+            <h1 class="project-card__title">{{ project.title }}</h1>\
+            <p class="project-card__text">{{ project.shortInfo }}</p>\
+          </div>\
+          <div class="project-card__pictures wrapper--wide">\
             <img class="picture" v-for="image in project.images" :src="\'images/projects/\' + image.title + image.type">\
           </div>\
-          <p v-for="text in project.longInfo" class="project-card__text">{{ text }}</p>\
-          <div class="project-card__bottominfo">\
-            <h3 class="project-card__text">responsibilities:</h3>\
-            <ul>\
-              <li class="project-card__task" v-for="task in project.tasks">{{ task }}</li>\
-            </ul>\
+          <div class="wrapper">\
+            <p v-for="text in project.longInfo" class="project-card__text">{{ text }}</p>\
+            <div class="project-card__bottominfo">\
+              <h3 class="project-card__text">responsibilities:</h3>\
+              <ul>\
+                <li class="project-card__task" v-for="task in project.tasks">{{ task }}</li>\
+              </ul>\
+            </div>\
           </div>\
         </div>\
       </transition>'

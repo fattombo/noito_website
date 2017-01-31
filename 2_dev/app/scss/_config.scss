@@ -151,6 +151,14 @@ $font-display: 'gt-sectra', serif;
   }
 }
 
+.wrapper--wide {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  @include clearfix;
+  max-width: 1000px;
+}
+
 .wrapper--flex {
 
   @include large {
