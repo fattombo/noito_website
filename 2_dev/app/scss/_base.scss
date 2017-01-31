@@ -12,6 +12,12 @@ html {
 
 body {
   background-color: $color-bkg;
+
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  -ms-hyphens: manual;
+  -o-hyphens: manual;
 }
 
 img {
@@ -93,8 +99,9 @@ a {
   @include large {
     position: absolute;
     width: 50%;
-    max-height: 85px;
-    margin-top: -85px;
+    max-height: 65px;
+    margin-top: -65px;
+    padding-bottom: 12px;
   }
 
   @at-root #{&}__info {
@@ -106,15 +113,6 @@ a {
 // S E C T I O N S
 // ---------------------------
 // ---------------------------
-
-.flex-switch-large {
-  :first-child {
-    order: 2;
-  }
-  :last-child {
-    order: 1;
-  }
-}
 
 .section {
   @include padding(24px, 16px, 32px);
@@ -141,6 +139,9 @@ a {
     @include medium {
       padding-bottom: 0;
     }
+    @include large {
+      padding-bottom: 65px;
+    }
   }
 
 
@@ -161,12 +162,20 @@ a {
 
   @at-root #{&}__title--nosub {
     margin-bottom: 72px;
+
+    @include xlarge {
+      margin-bottom: 80px;
+    }
   }
 
 
   @at-root #{&}__subtitle {
     @include type-title-sub;
     margin-bottom: 12px;
+
+    @include xlarge {
+      margin-bottom: 20px;
+    }
   }
 
   @at-root #{&}__subtitle--underline {
@@ -208,6 +217,10 @@ a {
 .text {
   @include type-text-body;
   margin-bottom: 16px;
+
+  @include xlarge {
+    margin-bottom: 24px;
+  }
 }
 
 .link {
@@ -251,7 +264,7 @@ a {
 
     @include large {
       display: block;
-      margin-top: 120px;
+      margin-top: 128px;
     }
     @include xlarge {
       margin-top: 80px;
@@ -327,9 +340,23 @@ a {
   }
   @include large {
     clear: both;
-    margin-top: 32px;
-    margin-left: 0;
+    float: none;
     width: 100%;
+    margin-top: 48px;
+    margin-left: 0;
+  }
+}
+
+.contact-info {
+  @include type-text-small;
+  clear: both;
+  display: none;
+
+  @include large {
+    display: block;
+  }
+  @include xlarge {
+    padding-top: 64px;
   }
 }
 
@@ -414,8 +441,10 @@ a {
       margin-right: 16px;
     }
 
-    .project-tab__info {
-      color: $color-ui;
+    @include large {
+      .project-tab__info {
+        color: $color-ui;
+      }
     }
   }
 }

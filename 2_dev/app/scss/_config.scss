@@ -158,6 +158,15 @@ $font-display: 'gt-sectra', serif;
   }
 }
 
+.flex-switch-large {
+  :first-child {
+    order: 2;
+  }
+  :last-child {
+    order: 1;
+  }
+}
+
 .hidden-large {
   @include large {
     display: none;
@@ -165,6 +174,16 @@ $font-display: 'gt-sectra', serif;
 }
 
 .show-large {
+  display: none;
+
+  @include large {
+    display: block;
+  }
+}
+
+.show-large--inline {
+  display: none;
+
   @include large {
     display: inline;
   }
