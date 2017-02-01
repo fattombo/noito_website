@@ -60,7 +60,13 @@ var n = (function() {
             <p class="project-card__text">{{ project.shortInfo }}</p>\
           </div>\
           <div class="project-card__pictures wrapper--wide">\
-            <img class="picture" v-for="image in project.images" :src="\'images/projects/\' + image.title + image.type">\
+          \
+            <picture v-for="image in project.images" class="picture">\
+              <source media="(min-width: 768px)" :srcset="\'images/projects/\' + image.title + \'_lg_1x\' + image.type + \' 1x, \' + \'images/projects/\' + image.title + \'_lg_2x\' + image.type + \' 2x\'">\
+              <source media="(min-width: 420px)" :srcset="\'images/projects/\' + image.title + \'_md_1x\' + image.type + \' 1x, \' + \'images/projects/\' + image.title + \'_md_2x\' + image.type + \' 2x\'">\
+              <img :src="\'images/projects/\' + image.title + \'_1x\' + image.type" :srcset="\'images/projects/\' + image.title + \'_2x\' + image.type + \' 2x\'" :alt="project.title">\
+            </picture>\
+          \
           </div>\
           <div class="wrapper">\
             <p v-for="text in project.longInfo" class="project-card__text">{{ text }}</p>\

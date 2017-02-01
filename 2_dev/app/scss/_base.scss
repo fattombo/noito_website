@@ -474,7 +474,7 @@ a {
   background-color: $color-bkg-alt2;
   transition: transform 1s;
 
-  @include large {
+  @include xlarge {
     width: 50%;
   }
 

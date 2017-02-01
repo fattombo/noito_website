@@ -1,4 +1,4 @@
-html, body, body div, span, h1, h2, h3, h4, h5, h6, p, em, img, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, nav, section {
+html, body, body div, span, h1, h2, h3, h4, h5, h6, p, em, img, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, nav, section, picture {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -8,7 +8,7 @@ html, body, body div, span, h1, h2, h3, h4, h5, h6, p, em, img, small, strong, s
 	background: transparent;
 }
 
-footer, header, nav, section {display: block;}
+footer, header, nav, section, picture {display: block;}
 
 html {
 	box-sizing: border-box;

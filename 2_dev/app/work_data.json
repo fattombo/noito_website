@@ -189,7 +189,37 @@
     "finished": true,
     "images": [
       {
-        "title": "boaa-brand_01",
+        "title": "boaa_brand01",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "boaa_brand02",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "boaa_brand03",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "boaa_brand04",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "boaa_brand06",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "boaa_brand05",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "boaa_brand07",
         "alt": "",
         "type": ".jpg"
       }
@@ -211,7 +241,47 @@
     "finished": true,
     "images": [
       {
-        "title": "parking_01",
+        "title": "ua_parking01",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "ua_parking02",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "ua_parking03",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "ua_parking04",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "ua_parking05",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "ua_parking06",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "ua_parking07",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "ua_parking08",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "ua_parking09",
         "alt": "",
         "type": ".jpg"
       }
@@ -235,14 +305,34 @@
     "finished": true,
     "images": [
       {
-        "title": "strajk_01",
+        "title": "strajk03",
         "alt": "",
         "type": ".jpg"
+      },
+      {
+        "title": "strajk02",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "strajk01",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "strajk04",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "strajk05",
+        "alt": "",
+        "type": ".png"
       }
     ]
   },
   {
-    "show": true,
+    "show": false,
     "title": "808,2 km",
     "type": [
       "print",
@@ -285,42 +375,47 @@
     "finished": true,
     "images": [
       {
-        "title": "topo_01",
+        "title": "topo01",
         "alt": "album cover",
         "type": ".jpg"
       },
       {
-        "title": "topo_02",
+        "title": "topo02",
         "alt": "cover typographic structure",
         "type": ".gif"
       },
       {
-        "title": "topo_03",
+        "title": "topo03",
         "alt": "album spread",
         "type": ".jpg"
       },
       {
-        "title": "topo_04",
+        "title": "topo04",
         "alt": "photography form the album",
         "type": ".jpg"
       },
       {
-        "title": "topo_05",
+        "title": "topo05",
         "alt": "photography form the album",
         "type": ".jpg"
       },
       {
-        "title": "topo_06",
+        "title": "topo09",
+        "alt": "stone",
+        "type": ".jpg"
+      },
+      {
+        "title": "topo06",
         "alt": "album detail",
         "type": ".jpg"
       },
       {
-        "title": "topo_07",
+        "title": "topo07",
         "alt": "album detail",
         "type": ".jpg"
       },
       {
-        "title": "topo_08",
+        "title": "topo08",
         "alt": "album cover",
         "type": ".jpg"
       }
@@ -353,7 +448,7 @@
     ]
   },
   {
-    "show": true,
+    "show": false,
     "title": "Bękart",
     "type": [
       "type",
