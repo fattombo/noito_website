@@ -167,7 +167,47 @@
     "finished": true,
     "images": [
       {
-        "title": "grupa_01",
+        "title": "gp_brand01",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "gp_brand02",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "gp_brand03",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "gp_brand04",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "gp_brand05",
+        "alt": "",
+        "type": ".gif"
+      },
+      {
+        "title": "gp_brand06",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "gp_brand07",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "gp_brand08",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "gp_brand09",
         "alt": "",
         "type": ".jpg"
       }
@@ -214,7 +254,7 @@
         "type": ".jpg"
       },
       {
-        "title": "boaa_brand05",
+        "title": "boaa_brand08",
         "alt": "",
         "type": ".png"
       },
@@ -222,6 +262,11 @@
         "title": "boaa_brand07",
         "alt": "",
         "type": ".jpg"
+      },
+      {
+        "title": "boaa_brand05",
+        "alt": "",
+        "type": ".png"
       }
     ]
   },
