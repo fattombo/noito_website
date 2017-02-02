@@ -61,6 +61,7 @@ var n = (function() {
           </div>\
           <div class="project-card__pictures wrapper--wide">\
           \
+            <div v-if="project.embed" v-html="project.embed" class="video-wrapper"></div>\
             <picture v-for="image in project.images" class="picture">\
               <source media="(min-width: 768px)" :srcset="\'images/projects/\' + image.title + \'_lg_1x\' + image.type + \' 1x, \' + \'images/projects/\' + image.title + \'_lg_2x\' + image.type + \' 2x\'">\
               <source media="(min-width: 420px)" :srcset="\'images/projects/\' + image.title + \'_md_1x\' + image.type + \' 1x, \' + \'images/projects/\' + image.title + \'_md_2x\' + image.type + \' 2x\'">\
