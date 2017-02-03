@@ -127,7 +127,7 @@
   },
   {
     "show": true,
-    "title": "Wiadomości Wrzesińskie",
+    "title": "newspaper",
     "type": [
       "type",
       "print",
@@ -143,16 +143,46 @@
     "finished": true,
     "images": [
       {
-        "title": "ww_01",
+        "title": "ww_brand01",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "ww_brand02",
+        "alt": "",
+        "type": ".gif"
+      },
+      {
+        "title": "ww_brand03",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "ww_brand04",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "ww_brand07",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "ww_brand05",
+        "alt": "",
+        "type": ".gif"
+      },
+      {
+        "title": "ww_brand06",
         "alt": "",
         "type": ".jpg"
       }
     ],
-    "embed": "<iframe src=\"https://player.vimeo.com/video/202193759?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0&sound=0\" style=\"position:absolute;top:0;bottom:0;\" width=\"100%\" height=\"100%\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+    "embed": "<iframe src=\"https://player.vimeo.com/video/202193759?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0\" style=\"position:absolute;top:0;bottom:0;\" width=\"100%\" height=\"100%\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
   },
   {
     "show": true,
-    "title": "Grupa Projekt",
+    "title": "grupa",
     "type": [
       "print",
       "product"
@@ -273,7 +303,7 @@
   },
   {
     "show": true,
-    "title": "Parking",
+    "title": "parking",
     "type": [
       "type"
     ],
@@ -335,7 +365,7 @@
   },
   {
     "show": true,
-    "title": "Strajk Dzieci Wrzesińkich",
+    "title": "game",
     "type": [
       "print",
       "product"
@@ -404,7 +434,7 @@
   },
   {
     "show": true,
-    "title": "Topography of Silence",
+    "title": "topography",
     "type": [
       "print"
     ],
