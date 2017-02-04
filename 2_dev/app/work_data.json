@@ -148,6 +148,11 @@
         "type": ".jpg"
       },
       {
+        "title": "ww_brand07",
+        "alt": "",
+        "type": ".gif"
+      },
+      {
         "title": "ww_brand02",
         "alt": "",
         "type": ".gif"
@@ -161,11 +166,6 @@
         "title": "ww_brand04",
         "alt": "",
         "type": ".png"
-      },
-      {
-        "title": "ww_brand07",
-        "alt": "",
-        "type": ".jpg"
       },
       {
         "title": "ww_brand05",
@@ -241,6 +241,11 @@
         "title": "gp_brand09",
         "alt": "",
         "type": ".gif"
+      },
+      {
+        "title": "gp_brand10",
+        "alt": "",
+        "type": ".png"
       }
     ]
   },
@@ -498,8 +503,8 @@
     ]
   },
   {
-    "show": false,
-    "title": "Kolekcja wrzesińska",
+    "show": true,
+    "title": "capital",
     "type": [
       "print",
       "product"
@@ -517,7 +522,47 @@
     "finished": true,
     "images": [
       {
-        "title": "kw_01",
+        "title": "kw_kapital01",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "kw_kapital03",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "kw_kapital04",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "kw_kapital05",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "kw_kapital06",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "kw_kapital07",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "kw_kapital08",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "kw_kapital09",
+        "alt": "",
+        "type": ".jpg"
+      },
+      {
+        "title": "kw_kapital02",
         "alt": "",
         "type": ".jpg"
       }
