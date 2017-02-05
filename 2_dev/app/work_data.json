@@ -18,7 +18,17 @@
     "finished": false,
     "images": [
       {
-        "title": "alfabet_01",
+        "title": "alfa01",
+        "alt": "",
+        "type": ".gif"
+      },
+      {
+        "title": "alfa02",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "alfa03",
         "alt": "",
         "type": ".gif"
       }
@@ -42,14 +52,19 @@
     "finished": false,
     "images": [
       {
-        "title": "boaa-web_01",
-        "alt": "alternative text",
-        "type": ".jpg"
+        "title": "boaa_web01",
+        "alt": "",
+        "type": ".png"
       },
       {
-        "title": "boaa_02",
+        "title": "boaa_web02",
         "alt": "",
-        "type": ".jpg"
+        "type": ".png"
+      },
+      {
+        "title": "boaa_web03",
+        "alt": "",
+        "type": ".png"
       }
     ]
   },
@@ -71,9 +86,24 @@
     "finished": false,
     "images": [
       {
-        "title": "ott_01",
+        "title": "ott_app01",
         "alt": "",
-        "type": ".jpg"
+        "type": ".png"
+      },
+      {
+        "title": "ott_app04",
+        "alt": "",
+        "type": ".gif"
+      },
+      {
+        "title": "ott_app02",
+        "alt": "",
+        "type": ".png"
+      },
+      {
+        "title": "ott_app03",
+        "alt": "",
+        "type": ".png"
       }
     ]
   },
