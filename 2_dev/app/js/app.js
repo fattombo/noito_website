@@ -38,7 +38,6 @@ var n = (function() {
   Vue.component('projectCard', {
     template: '\
       <div class="project-card">\
-        <div @click="$emit(\'hide\')" class="btn-close"><img src="images/close.svg" alt="close"></div>\
           <slot></slot>\
       </div>'
   });
