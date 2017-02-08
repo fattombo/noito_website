@@ -9,8 +9,8 @@
     ],
     "shortInfo": "Inspired by the shape of the window, interactive messaging system based on the façade of the Alfa building towers.",
     "longInfo": [
-      "After moving to a new studio on the eighth floor of an office building, location, the modular façade and characteristic window layout encouraged me to design the interactive messaging system.",
-      "I designed a typeface based on the construction of the window. Then created a prototype of the typo-panel in 1:4 scale based on the LED strips. The individual characters are displayed by a code running on the Arduino board.",
+      "After moving to a new studio on the eighth floor of an office building, the location, modular façade and characteristic window layout encouraged me to try to design an interactive messaging system.",
+      "First, I designed a typeface based on the construction of the window. Then created a prototype of the typo-panel in 1:4 scale based on the LED strips. The individual characters are displayed by a code running on the Arduino board.",
       "Currently working on app that sends messages to the Arduino and displays them on the typo-panel."
     ],
     "tasks": [

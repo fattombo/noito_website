@@ -21,7 +21,8 @@ including exhibition, packaging, visual identity, editorial, printed and digital
   <!-- scripts -->
   <!--build:js js/app.min.js -->
   <script src="js/es6-promise.auto.min.js"></script>
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="js/vue.min.js"></script>
+  <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
   <script src="js/smooth-scroll.js"></script>
   <script src="js/instafeed.min.js"></script>
   <script src="js/remove-hover.min.js"></script>
@@ -249,7 +250,7 @@ including exhibition, packaging, visual identity, editorial, printed and digital
             </div>
             <div class="contact-links">
               <p class="contact-links__item">
-                write at: <a class="link link--alt" href="mailto:info@noito.co">info@noito.co</a>
+                write at: <a class="link link--alt" href="mailto:tomek@noito.co">tomek@noito.co</a>
               </p>
               <p class="contact-links__item">
                 call on: <a class="link link--alt" href="tel:0048790213658">0048&nbsp;790213658</a>
@@ -281,7 +282,9 @@ including exhibition, packaging, visual identity, editorial, printed and digital
     </footer> <!-- end footer -->
 
     <!-- project showcase -->
-    <div v-if="showcase" @click="hide" class="btn-close"><img src="images/close.svg" alt="close"></div>\
+    <transition name="pop">
+      <div v-if="showcase" @click="hide" class="btn-close"><img src="images/close.svg" alt="close"></div>
+    </transition>
     <transition name="slide-fade">
       <project-card v-if="showcase"
                    @hide="hide">
@@ -289,7 +292,7 @@ including exhibition, packaging, visual identity, editorial, printed and digital
       </project-card>
     </transition>
 
-  </div> <!-- end div#app -->
+  </div> <!-- end #container -->
   <script>
     n.init();
   </script>
