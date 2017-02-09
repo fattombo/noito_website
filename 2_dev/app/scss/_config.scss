@@ -41,18 +41,18 @@ $desktop-big-width:  1400px;
 // T Y P E
 // ---------------------------
 // ---------------------------
-@include font-face('gt-sectra', 'gt-sectra-display-bold', $weight: 'bold');
+@include font-face('gt-sectra', 'gt-sectra-fine-medium', $weight: 'bold');
 @include font-face('suisse-mono', 'SuisseIntlMono-Regular-WebS');
 
-$font-primary: 'suisse-mono', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-display: 'gt-sectra', serif;
+$font-primary: 'suisse-mono', 'Lucida Console', 'Monaco', sans-serif;
+$font-display: 'gt-sectra', 'PT Serif', 'Times New Roman', serif;
 
 @mixin type-title-big {
   font-family: $font-display;
   font-size: 2em; // 32px
   line-height: 1.25; // 40px
   letter-spacing: -0.2px;
-  font-weight: bold;
+  // font-weight: bold;
 
   @include medium {
     font-size: 2.5em;
