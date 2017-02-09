@@ -7,14 +7,14 @@
       "digital",
       "product"
     ],
-    "shortInfo": "Inspired by the shape of the window, interactive messaging system based on the façade of the Alfa building towers.",
+    "shortInfo": "Inspired by a window shape, an interactive messaging system placed on the façade of the Alfa building towers in Poznań, Poland.",
     "longInfo": [
-      "After moving to a new studio on the eighth floor of an office building, the location, modular façade and characteristic window layout encouraged me to try to design an interactive messaging system.",
+      "What encouraged me to try to design this interactive messaging system is the location I am working in now - a studio o on the eight floor of an office building with a modular façade and a characteristic window layout.",
       "First, I designed a typeface based on the construction of the window. Then created a prototype of the typo-panel in 1:4 scale based on the LED strips. The individual characters are displayed by a code running on the Arduino board.",
       "Currently working on app that sends messages to the Arduino and displays them on the typo-panel."
     ],
     "tasks": [
-      "design of the typeface based on the shape of the window",
+      "design of the window-shaped typeface",
       "design and development of a typo-panel with LED strips",
       "programming the Arduino board",
       "design and development of an app sending and displaying messages on the typo-panel"
@@ -52,8 +52,8 @@
     ],
     "shortInfo": "Website for an Poland based and internationally operating young and slick architectural studio.",
     "longInfo": [
-      "Based on the visual identity I did earlier I am designing a website showing completed and in development projects as well as the studio and its founder.",
-      "Design is ready. Currently working on markup, styles, interactions and CMS setup."
+      "Based my previous visual identity experience, I designed a website presenting completed and ongoing projects as well as the studio and its founder.",
+      "The design is ready. Currently, I focus on: on markup, styles, interactions and CMS setup."
     ],
     "tasks": [
       "basic user experience research and prototype",
@@ -88,8 +88,8 @@
     "shortInfo": "Simple web app, based on educational approach developed by Maria Montessori, helping children learn new words.",
     "longInfo": [
       "The Three Period Lesson by Italian physician Maria Montessori is divided into three simple steps, so the language can be absorbed more easily.",
-      "On the basis of this method, I developed an application that helps parents prepare sets a new vocabulary and the kids learn new words quickly and efficiently.",
-      "Currently working on the app logic."
+      "On the basis of this method, I developed an application that helps parents prepare new vocabulary sets thanks to which the kids learn new words quickly and efficiently.",
+      "Current work is focused around the app logic."
     ],
     "tasks": [
       "research supervised by Montessori Education methodology specialist",
@@ -179,9 +179,9 @@
     ],
     "shortInfo": "Rebrand, redesign and new digital products design for a local newspaper Wiadomości Wrzsińskie.",
     "longInfo": [
-        "After 25 years of providing information and helping local community newspaper Wiadomości Wrzesińskie needed an update of its visual communication and digital strategy to maintain its position as a modern local information hub.",
+        "After 25 years of providing information and helping local community newspaper, Wiadomości Wrzesińskie needed an update of its visual communication and a digital strategy to maintain its position as a modern local information hub.",
         "In order to ensure unified visual communications across all channels of content distribution, I proposed a new visual identity and strategy of new products development.",
-        "Relying on the new visual identity I refreshed the layout of the newspaper, designed a new website and mobile application, created micro-sites presenting new products as well as prepared animations for TV department."
+        "Relying on the new visual identity, I refreshed the newspaper's layout, designed a new website and a mobile application, created micro-sites presenting new products as well as prepared animations for a TV department."
       ],
     "tasks": [
       "local community and customer service research",
@@ -368,7 +368,7 @@
     "shortInfo": "Signage and wayfinding system for an underground parking space designed by ultra-architects.",
     "longInfo": [
         "All buildings designed by the ultra-architects studio are characterized by true functionality and technological sophistication.",
-        "For a parking in one of their buildings I developed a dedicated typeface and visual communication system for the wayfinding scheme."
+        "I developed a dedicated typeface and visual communication system for the wayfinding scheme for a parking space in one of their buildings."
       ],
     "tasks": [
       "design of the dedicated typeface",
