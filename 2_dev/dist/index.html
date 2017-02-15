@@ -7,7 +7,6 @@
   <title>n o i t o</title>
   <meta name="title" content="noito graphic design studio">
   <meta name="description" content="Architect, designer, developer working across a range of services including exhibition, packaging, visual identity, editorial, printed and digital products design.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- open graph tags -->
   <meta property="og:title" content="noito">
   <meta property="og:description" content="Architect, designer, developer working across a range of services
@@ -17,15 +16,22 @@ including exhibition, packaging, visual identity, editorial, printed and digital
   <meta property="og:site_name" content="noito">
   <meta property="og:image" content="">
   <!-- stylesheets -->
-  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- scripts -->
-  <script src="js/app.min.js"></script>
+  <script src="js/appv2.min.js" defer></script>
+  <!-- google analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-65080990-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
 <body>
   <div id="container">
-
     <div class="wrapper--flex">
-
       <header class="header" id="top">
         <a class="header__logo" href="http://noito.co">
           <img srcset="images/noito_logo_2x.gif 2x" srcset="images/noito_logo_1x.gif 1x" src="images/noito_logo_1x.gif" alt="noito logo">
@@ -47,7 +53,6 @@ including exhibition, packaging, visual identity, editorial, printed and digital
           dsgn &amp; dev
         </h2>
       </header> <!-- end header -->
-
       <section class="section" id="about">
         <div class="wrapper">
           <header class="section__header">
@@ -66,20 +71,18 @@ including exhibition, packaging, visual identity, editorial, printed and digital
               Architectural background backed by visual communication, graphic design, print production process and front-end development skills help provide effective and engaging solutions.
             </p>
             <p class="text">
-              Check what I&nbsp;am <a class="link" data-scroll href="#current-work">working</a> on, what I&nbsp;<a class="link" data-scroll href="#finished-work">have done</a> so far or just <a class="link" data-scroll href="#contact">contact me</a> right away.
+              Check out what I&nbsp;am <a class="link" data-scroll href="#current-work">working</a> on currently, what I&nbsp;<a class="link" data-scroll href="#finished-work">have done</a> so far or just <a class="link" data-scroll href="#contact">contact me</a> right away.
             </p>
           </div> <!-- end div.section__content -->
         </div>
       </section> <!-- end section#about -->
     </div>
-
     <div class="wrapper--flex flex-switch-large">
-
       <section class="section section--project" id="current-work">
         <div class="wrapper">
           <header class="section__header section__header--noline">
             <h1 class="section__title section__title--nosub">
-              Currently working on
+              Currently in development
             </h1>
           </header>
           <div class="section__content section__content--notop">
@@ -94,27 +97,23 @@ including exhibition, packaging, visual identity, editorial, printed and digital
           </div>
         </div>
       </section> <!-- end section#current-work -->
-
       <section class="section">
         <div class="wrapper">
           <p class="section__text">
-            Imagine the feeling, the joy, when you see or use something smart &amp;&nbsp;slick. Are we there?
+            Imagine the feeling, the joy, when you see or use something smart &amp;&nbsp;slick.
           </p>
           <p class="section__text">
-            That is what I am always looking for!
+            Yep, that is what I&nbsp;am always looking for!
           </p>
           <div class="section__content">
-            <figure class="picture">
-              <img src="images/noito_show.gif" alt="">
-            </figure>
+            <div class="picture picture--showreel">
+              <div class="gif gif--showreel"></div>
+            </div>
           </div>
         </div>
       </section> <!-- end aside -->
-
     </div>
-
     <div class="wrapper--flex">
-
       <section class="section section--project" id="finished-work">
         <div class="wrapper">
           <header class="section__header section__header--noline">
@@ -134,7 +133,6 @@ including exhibition, packaging, visual identity, editorial, printed and digital
           </div>
         </div>
       </section> <!-- end section#finished-work -->
-
       <section class="section">
         <div class="wrapper">
           <header class="section__header">
@@ -196,17 +194,14 @@ including exhibition, packaging, visual identity, editorial, printed and digital
                  srcset="images/logos/bec_zmiana_1x.png 1x"
                     src="images/logos/bec_zmiana_1x.png" alt="bęc zmiana foundation logotype">
             </figure>
-            <figure class="picture picture--awards">
-              <img src="images/noito_exposure.gif" alt="">
-            </figure>
+            <div class="picture picture--awards">
+              <div class="gif gif--awards"></div>
+            </div>
           </div> <!-- end div.section__content -->
         </div>
       </section> <!-- end section#awards -->
-
     </div>
-
     <div class="wrapper--flex flex-switch-large">
-
       <section class="section section--project">
         <div class="wrapper">
           <header class="section__header section__header--noline">
@@ -214,7 +209,7 @@ including exhibition, packaging, visual identity, editorial, printed and digital
               Fresh content
             </h1>
             <h3 class="section__subtitle">
-              find more <a class="link" href="https://www.instagram.com/noitostudio/" target="_blank">here</a>
+              find out more <a class="link" href="https://www.instagram.com/noitostudio/" target="_blank">here</a>
             </h3>
           </header>
           <div class="section__content section__content--notop" id="insta">
@@ -225,7 +220,6 @@ including exhibition, packaging, visual identity, editorial, printed and digital
           </div>
         </div>
       </section> <!-- end section#concept-work -->
-
       <section class="section section--contact" id="contact">
         <div class="wrapper">
           <header class="section__header section__header--noline">
@@ -237,12 +231,14 @@ including exhibition, packaging, visual identity, editorial, printed and digital
             </h3>
           </header>
           <div class="section__content section__content--notop">
-            <div class="profile-picture">
-              <img src="images/tomek_profile.jpg" alt="Tomek Wojciechowski">
-            </div>
+            <picture class="profile-picture">
+              <source media="(min-width: 672px)" srcset="images/tomek_profile_lg_1x.jpg 1x, images/tomek_profile_lg_2x.jpg 2x">
+              <source media="(min-width: 420px)" srcset="images/tomek_profile_md_1x.jpg 1x, images/tomek_profile_md_2x.jpg 2x">
+              <img src="images/tomek_profile_1x.jpg" srcset="images/tomek_profile_2x.jpg 2x">
+            </picture>
             <div class="contact-links">
               <p class="contact-links__item">
-                write at: <a class="link link--alt" href="mailto:info@noito.co">info@noito.co</a>
+                write at: <a class="link link--alt" href="mailto:tomek@noito.co">tomek@noito.co</a>
               </p>
               <p class="contact-links__item">
                 call on: <a class="link link--alt" href="tel:0048790213658">0048&nbsp;790213658</a>
@@ -255,9 +251,9 @@ including exhibition, packaging, visual identity, editorial, printed and digital
               <a class="social-links__item" href="https://www.instagram.com/noitostudio/" target="_blank">
                 <img srcset="images/instagram_2x.png 2x" srcset="images/instagram_1x.png 1x" src="images/instagram_1x.png" alt="">
               </a>
-              <!-- <a class="social-links__item" href="https://www.behance.net/noitostudio" target="_blank">
+              <a class="social-links__item" href="https://www.behance.net/noitostudio" target="_blank">
                 <img srcset="images/behance_2x.png 2x" srcset="images/behance_1x.png 1x" src="images/behance_1x.png" alt="">
-              </a> -->
+              </a>
               <a class="social-links__item" href="https://github.com/fattombo" target="_blank">
                 <img srcset="images/github_2x.png 2x"  srcset="images/github_1x.png 1x" src="images/github_1x.png" alt="">
               </a>
@@ -265,26 +261,21 @@ including exhibition, packaging, visual identity, editorial, printed and digital
           </div>
         </div>
       </section> <!-- end section#contact -->
-
     </div>
-
     <footer class="footer">
       <p class="footer__info">&copy; noito</p>
       <a data-scroll class="btn btn--alt" href="#top">up we go</a>
     </footer> <!-- end footer -->
-
     <!-- project showcase -->
-    <div v-if="showcase" @click="hide" class="btn-close"><img src="images/close.svg" alt="close"></div>\
+    <transition name="pop">
+      <div v-if="showcase" @click="hide" class="btn-close"><img src="images/close.svg" alt="close"></div>
+    </transition>
     <transition name="slide-fade">
       <project-card v-if="showcase"
                    @hide="hide">
           <project-info :project="projects[number]"></project-info>
       </project-card>
     </transition>
-
-  </div> <!-- end div#app -->
-  <script>
-    n.init();
-  </script>
+  </div> <!-- end #container -->
 </body>
 </html>
