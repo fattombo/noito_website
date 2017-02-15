@@ -94,7 +94,7 @@ a {
   // padding: 0 $side-padding 16px;
 
   color: $color-txt;
-  background-color: $color-bkg-alt3;
+  background-color: $color-bkg-alt2;
 
   @include large {
     position: absolute;
@@ -134,7 +134,7 @@ a {
   }
 
   @at-root #{&}--contact {
-    background-color: $color-bkg-alt3;
+    background-color: $color-bkg-alt2;
 
     @include medium {
       padding-bottom: 0;
@@ -474,7 +474,7 @@ a {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 
-  background-color: $color-bkg-alt2;
+  background-color: $color-bkg-alt1;
   transition: transform 1s;
 
   // @include xlarge {
