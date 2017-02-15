@@ -1,4 +1,4 @@
-var n = (function() {
+(function() {
 
   var get = function(url) {
     return new Promise(function(resolve, reject) {
@@ -79,6 +79,46 @@ var n = (function() {
       </transition>'
   });
 
+  new Vue({
+    el: '#container',
+    data: {
+      upload: false,
+      showcase: false,
+      number: null,
+      projects: []
+    },
+    created: function () {
+      var self = this;
+      get('work_data.json')
+        .then(function (response) {
+          self.projects = JSON.parse(response);
+          if (!self.upload) {
+            self.upload = true;
+          }
+        })
+        .catch(function (er) {
+          console.log(er);
+        });
+    },
+    methods: {
+      show: function(index) {
+        if (!this.showcase) {
+          this.showcase = true;
+          this.number = index;
+        } else {
+          this.number = index;
+        }
+        document.documentElement.style.overflow = 'hidden';
+      },
+      hide: function() {
+        if (this.showcase) {
+          this.showcase = false;
+        }
+        document.documentElement.style.overflow = 'auto';
+      }
+    }
+  });
+
   var feed = new Instafeed({
     get: 'user',
     userId: 'self',
@@ -101,56 +141,8 @@ var n = (function() {
     }
   });
 
-
-  // init module
-  var init = function() {
-    new Vue({
-      el: '#container',
-      data: {
-        upload: false,
-        showcase: false,
-        number: null,
-        projects: []
-      },
-      created: function () {
-        var self = this;
-        get('work_data.json')
-          .then(function (response) {
-            self.projects = JSON.parse(response);
-            if (!self.upload) {
-              self.upload = true;
-            }
-          })
-          .catch(function (er) {
-            console.log(er);
-          });
-      },
-      methods: {
-        show: function(index) {
-          if (!this.showcase) {
-            this.showcase = true;
-            this.number = index;
-          } else {
-            this.number = index;
-          }
-          document.documentElement.style.overflow = 'hidden';
-        },
-        hide: function() {
-          if (this.showcase) {
-            this.showcase = false;
-          }
-          document.documentElement.style.overflow = 'auto';
-        }
-      }
-    });
-
-    feed.run();
-    smoothScroll.init();
-    removeHover();
-  }
-
-  return {
-      init: init
-  };
+  feed.run();
+  smoothScroll.init();
+  removeHover();
 
 })();

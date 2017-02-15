@@ -289,6 +289,9 @@ a {
   @include large {
     float: right;
     width: 40%;
+    > img {
+      border-radius: 50%;
+    }
   }
 }
 

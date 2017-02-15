@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
     cleanCSS = require('gulp-clean-css'),
+    critical = require('critical'),
     useref = require('gulp-useref'),
     gulpIf = require('gulp-if'),
     uglify = require('gulp-uglify'),
@@ -107,6 +108,18 @@ gulp.task('image-dist', function() {
 gulp.task('copyJSON', function() {
   return gulp.src('app/*.json')
     .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('critical', function (cb) {
+    critical.generate({
+        inline: true,
+        base: 'dist/',
+        src: 'index.html',
+        dest: 'dist_crit/index.html',
+        minify: true,
+        width: 1280,
+        height: 800
+    });
 });
 
 // start dist
