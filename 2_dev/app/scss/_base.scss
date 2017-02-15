@@ -543,7 +543,7 @@ a {
 .btn-close {
   position: fixed;
   top: 18px;
-  right: 16px;
+  right: 20px;
   width: 32px;
   height: 32px;
   z-index: 200;
@@ -551,13 +551,9 @@ a {
   border-radius: 50%;
   cursor: pointer;
 
-  &:hover {
-    background-color: $color-ui;
-  }
-
   @include medium {
     top: 54px;
-    right: 64px;
+    right: 72px;
   }
   @include large {
     top: 32px;
