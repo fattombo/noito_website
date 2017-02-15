@@ -261,6 +261,7 @@ a {
 
   @at-root #{&}--awards {
     display: none;
+    @include bkgImgWrapper(1);
 
     @include large {
       display: block;
@@ -269,6 +270,25 @@ a {
     @include xlarge {
       margin-top: 80px;
     }
+  }
+
+  @at-root #{&}--showreel {
+    @include bkgImgWrapper(1);
+  }
+}
+
+.gif {
+  @include bkgImg;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @at-root #{&}--showreel {
+    background-image: url(../images/noito_show.gif);
+  }
+
+  @at-root #{&}--awards {
+    background-image: url(../images/noito_exposure.gif);
   }
 }
 

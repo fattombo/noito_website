@@ -20,8 +20,8 @@ including exhibition, packaging, visual identity, editorial, printed and digital
   <!-- scripts -->
   <!--build:js js/app.min.js defer-->
   <script src="js/es6-promise.auto.min.js"></script>
-  <!-- <script src="js/vue.min.js"></script> -->
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="js/vue.min.js"></script>
+  <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
   <script src="js/smooth-scroll.js"></script>
   <script src="js/instafeed.min.js"></script>
   <script src="js/remove-hover.min.js"></script>
@@ -120,9 +120,9 @@ including exhibition, packaging, visual identity, editorial, printed and digital
             Yep, that is what I&nbsp;am always looking for!
           </p>
           <div class="section__content">
-            <figure class="picture">
-              <img src="images/noito_show.gif" alt="">
-            </figure>
+            <div class="picture picture--showreel">
+              <div class="gif gif--showreel"></div>
+            </div>
           </div>
         </div>
       </section> <!-- end aside -->
@@ -212,9 +212,9 @@ including exhibition, packaging, visual identity, editorial, printed and digital
                  srcset="images/logos/bec_zmiana_1x.png 1x"
                     src="images/logos/bec_zmiana_1x.png" alt="bęc zmiana foundation logotype">
             </figure>
-            <figure class="picture picture--awards">
-              <img src="images/noito_exposure.gif" alt="">
-            </figure>
+            <div class="picture picture--awards">
+              <div class="gif gif--awards"></div>
+            </div>
           </div> <!-- end div.section__content -->
         </div>
       </section> <!-- end section#awards -->
@@ -253,9 +253,11 @@ including exhibition, packaging, visual identity, editorial, printed and digital
             </h3>
           </header>
           <div class="section__content section__content--notop">
-            <div class="profile-picture">
-              <img src="images/tomek_profile.jpg" alt="Tomek Wojciechowski">
-            </div>
+            <picture class="profile-picture">
+              <source media="(min-width: 672px)" srcset="images/tomek_profile_lg_1x.jpg 1x, images/tomek_profile_lg_2x.jpg 2x">
+              <source media="(min-width: 420px)" srcset="images/tomek_profile_md_1x.jpg 1x, images/tomek_profile_md_2x.jpg 2x">
+              <img src="images/tomek_profile_1x.jpg" srcset="images/tomek_profile_2x.jpg 2x">
+            </picture>
             <div class="contact-links">
               <p class="contact-links__item">
                 write at: <a class="link link--alt" href="mailto:tomek@noito.co">tomek@noito.co</a>
